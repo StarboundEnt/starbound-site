@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>Starbound</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Inter&family=Lexend&display=swap" rel="stylesheet">
+</head>
+
+<script>
+    document.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 20; // horizontal movement
+      const y = (e.clientY / window.innerHeight - 0.5) * 20; // vertical movement
+  
+      const stars = document.querySelectorAll('.stars');
+      stars.forEach(starLayer => {
+        starLayer.style.transform = `translate(${x}px, ${y}px)`;
+      });
+    });
+  </script>
+  
+
+<body>
+   
+        <header class="site-header">
+            <div class="nav-container">
+          
+              <div class="logo">
+                <img src="logo.png" alt="Starbound Logo" />
+              </div>
+          
+              <nav class="nav-links">
+                <a href="#hero">Home</a>
+                <a href="#problem">Problem</a>
+                <a href="#solution">Solution</a>
+                <a href="#contact">Contact</a>
+              </nav>
+          
+            </div>
+          </header>          
+      
+          <section class="hero parallax" id="hero">
+            <div class="hero-content">
+              <h1>A future of health equity.</h1>
+              
+              <p class="subheading">
+                Starbound is reimagining everyday health through dignity-first design, empathy-led evidence, and sustainable wellness tools.<br>
+                Powered by love, data, and rage.
+              </p>
+              
+              <a href="https://forms.fillout.com/t/vBQ4hMRgZUus" target="_blank" class="cta-button">
+                Your experience matters here
+              </a>
+              
+              <p class="support-text">
+                No ads. No tracking. Just real perspectives shaping what comes next.
+              </p>
+            </div>
+          </section>
+          
+          
+      
+
+      <section class="problem parallax" id="problem">
+        <div class="problem-content">
+          <h2>Who gets to be ‘well’, anyway?</h2>
+          <p class="intro">
+            Healthcare has become a luxury.<br>
+            If you’ve ever skipped care because of cost, felt judged asking for help, or just didn’t know where to start — you’re not alone.<br>
+            Starbound is building something better: accessible, evidence-based, and actually human.
+          </p>
+      
+          <div class="stat-cards">
+            <!-- Stat 1 -->
+            <div class="stat-card aqua">
+                <div class="stat-icon">
+                    <img src="images/1.svg" alt="Money Bag Icon">
+                  </div>                  
+              <p class="stat-full">
+                1 in 3 Australians <span class="glitch">skip medical care because of cost.</span>
+              </p>
+              <span class="source">– ABS, 2021</span>
+            </div>
+          
+            <!-- Stat 2 -->
+            <div class="stat-card pink">
+                <div class="stat-icon">
+                    <img src="images/2.svg" alt="Hurdle Icon">
+                  </div>                  
+              <p class="stat-full">
+                Young people from disadvantaged backgrounds are <span class="glitch">least likely to access mental health care.</span>
+              </p>
+              <span class="source">– Orygen, 2023</span>
+            </div>
+          
+            <!-- Stat 3 -->
+            <div class="stat-card orange">
+                <div class="stat-icon">
+                    <img src="images/3.svg" alt="Warning Icon">
+                  </div>                  
+              <p class="stat-full">
+                Most wellness advice online <span class="glitch">isn’t evidence-based</span>, and can be harmful.
+              </p>
+              <span class="source">– VicHealth, 2022</span>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+    
+      
+
+      <section class="solution parallax" id="solution">
+        <div class="solution-text">
+          <h2>We’re building something different</h2>
+          <p class="solution-intro">
+            We’re building something different: evidence-based, dignity-first health tools for people who’ve been left out of the system.<br>
+            But we’re building it with you — not for you.<br>
+            <strong>Share your experience and help shape what comes next.</strong>
+          </p>
+        </div>
+      
+
+
+<div class="vhs-loading">
+    <div class="vhs-label">STARBOUND SYSTEM // EXPERIMENT 001</div>
+    <div class="vhs-bar">
+      <div class="vhs-progress"></div>
+    </div>
+    <p class="vhs-status">:: LOADING USER INPUT ::</p>
+  </div>
+  
+    
+
+
+
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+        
+          
+
+
+
+      
+      
+
+      <section class="contact parallax" id="contact">
+        <h2>Let’s chat!</h2>
+        <p class="contact-intro">
+          Still thinking about something you read here?<br>
+          Had an idea? A story? A question?<br>
+          Let’s have a chat — about health, care, systems, survival, or whatever else is on your radar.
+        </p>
+      
+        <div class="terminal">
+          <div class="terminal-header">STARBOUND TERMINAL v1.0 — CONNECTING<span class="blink">…</span></div>
+      
+          <form class="terminal-body">
+            <label>> NAME:</label>
+            <input type="text" name="name" placeholder="___________" />
+      
+            <label>> EMAIL:</label>
+            <input type="email" name="email" placeholder="___________" />
+      
+            <label>> MESSAGE:</label>
+            <textarea name="message" placeholder="___________"></textarea>
+      
+            <div class="fake-response">[✔] Input accepted<br>[★] Encoding message for transmission...</div>
+      
+            <button type="submit" class="terminal-btn">SEND TRANSMISSION</button>
+          </form>
+      
+          <p class="contact-footer">
+            Your message won’t be tracked, mined, or forgotten.
+          </p>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+      <footer class="site-footer">
+        <div class="footer-grid">
+          
+          <div class="footer-info">
+            <p><strong>CONNECT</strong></p>
+            <div class="footer-icons">
+              <a href="mailto:starbound.enterprise@gmail.com" aria-label="Email">
+                <img src="icons/email.svg" alt="Email Icon">
+              </a>
+              <a href="https://www.instagram.com/starboundorg/" target="_blank" aria-label="Instagram">
+                <img src="icons/instagram.svg" alt="Instagram Icon">
+              </a>
+              <a href="https://www.linkedin.com/company/starboundorg/" target="_blank" aria-label="LinkedIn">
+                <img src="icons/linkedin.svg" alt="LinkedIn Icon">
+              </a>
+            </div>
+            <p>© Starbound 2025</p>
+            <p><em>Built from scratch, not from privilege.</em></p>
+            <p><a href="https://your-fillout-link" target="_blank">Healing starts with being heard.</a></p>
+          </div>
+      
+          <div class="footer-acknowledgement">
+            <p>
+              Starbound acknowledges the Traditional Custodians of the lands on which we live, work, and create. This always was, and always will be, Aboriginal land.
+            </p>
+            <p>
+              We also acknowledge those whose voices are often unheard in health spaces — people living with disability, chronic illness, trauma, and mental health challenges; migrants, queer and trans communities, carers, and anyone surviving systems that weren’t built with them in mind.
+            </p>
+          </div>
+      
+        </div>
+      </footer>
+      
+      
+    
+      
