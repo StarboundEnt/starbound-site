@@ -1,0 +1,103 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="complexity.css" />
+</head>
+<body>
+  <!-- replace everything in <body> with the snippet below -->
+  <div id="introScreen">
+    <h1>What’s your health Complexity Profile?</h1>
+    <h2>Health isn’t just about what you do — it’s shaped by what you’re up against.</h2>
+
+
+<div class="glitch-container">
+  <div class="input-row">
+    <div class="input-label">
+      <div class="glitch-word choices-glitch">Choices</div>
+      <div class="arrow">↓</div>
+    </div>
+
+    <div class="input-label">
+      <div class="glitch-word chances-glitch">Chances</div>
+      <div class="arrow">↓</div>
+    </div>
+  </div>
+
+  <div class="glitch-word profile-glitch">Your complexity profile</div>
+</div>
+    
+    <p>This tool helps you understand your current health context, no judgement, no pressure.</p>
+    <ul>
+      <li>Answer a few quick questions about your habits and environment</li>
+      <li>Get a snapshot of your health complexity profile</li>
+      <li>See how Starbound would support you</li>
+      <li>You don’t need to share your name or any sensitive info.</li>
+    </ul>
+    <p class="intro-disclaimer">
+    <strong>Disclaimer:</strong> This is a demo version of Starbound’s complexity profile tool. Your answers are not saved, tracked, or linked to your identity. This tool does not use AI or make any personalised predictions. It’s a simplified snapshot — it doesn’t analyse behaviour patterns or contextual trends like the real app will. You can skip any question. Nothing here is medical advice.
+    </p>
+    <button id="startBtn">Start</button>
+  </div>
+
+
+<div id="questionContainer" class="hidden">
+  <div id="questionContent"></div>
+  <div class="controls">
+    <button id="backBtn"    class="back-btn">← Back</button>
+    <button id="restartBtn" class="restart-btn">Start Over</button>
+  </div>
+</div>
+  <div id="resultContainer" class="hidden"></div>
+
+  <script src="complexity.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    // Reset positions first
+    gsap.set(".choices", { x: -100, opacity: 0 });
+    gsap.set(".chances", { x: 100, opacity: 0 });
+    gsap.set(".result", { scale: 0, opacity: 0 });
+
+    // Animate Choices from left
+    gsap.to(".choices", {
+      x: 0,
+      opacity: 1,
+      duration: 1,
+      ease: "power3.out",
+      delay: 0.2
+    });
+
+    // Animate Chances from right
+    gsap.to(".chances", {
+      x: 0,
+      opacity: 1,
+      duration: 1,
+      ease: "power3.out",
+      delay: 0.4
+    });
+
+    // Animate Result popping in with bounce
+    gsap.to(".result", {
+      scale: 1,
+      opacity: 1,
+      duration: 1,
+      ease: "elastic.out(1, 0.5)",
+      delay: 1
+    });
+
+    // Optional: pulse the profile icon gently forever
+    gsap.to(".result", {
+      scale: 1.05,
+      repeat: -1,
+      yoyo: true,
+      duration: 1.5,
+      ease: "sine.inOut",
+      delay: 2
+    });
+  });
+</script>
+
+
+
+</body>
