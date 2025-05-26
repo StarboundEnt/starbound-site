@@ -415,6 +415,26 @@ body {
 }
 
 
+.demo-button {
+  display: inline-block;
+  background-color: #f5e6ca;
+  color: #1f0150;
+  font-family: 'Space Mono', monospace;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 20px;
+}
+
+.demo-button:hover {
+  background-color: #ffda3e;
+  box-shadow: 0 0 10px #ffda3e;
+}
+
+
 
 
   .vhs-loading {
