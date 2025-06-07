@@ -229,6 +229,11 @@ function goToStep(stepNumber) {
     document.getElementById(`step${i}`).classList.add('hidden');
   }
   document.getElementById(`step${stepNumber}`).classList.remove('hidden');
+
+  if (stepNumber === 3) {
+    document.getElementById('habitForecastWrapper').classList.remove('hidden');
+    document.getElementById('askStarboundWrapper').classList.remove('hidden');
+  }
 }
 
 function renderOptions() {
@@ -357,7 +362,6 @@ featureCards.appendChild(nextBtn);
 
 }
 
-document.getElementById('habitForecastWrapper').classList.remove('hidden');
 
 const habitQuestions = {
   skipMeals: "What happens if I stop eating regular meals?",
@@ -478,5 +482,4 @@ Object.entries(askStarboundQuestions).forEach(([id, text]) => {
 const askStarboundPicker = document.getElementById('askStarboundPicker');
 
 
-document.getElementById('askStarboundWrapper').classList.remove('hidden');
 
