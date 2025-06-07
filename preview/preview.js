@@ -276,13 +276,13 @@ btn.addEventListener('click', () => {
 }
 
 document.getElementById('generateBtn').addEventListener('click', () => {
-const allSelected = [...selectedChoices, ...selectedChances];
-const contradiction = checkContradictions(allSelected);
+  const allSelected = [...selectedChoices, ...selectedChances];
+  const contradiction = findContradiction(allSelected);
 
-if (contradiction) {
-  alert(`Oops! You've selected contradictory options: "${contradiction[0]}" and "${contradiction[1]}". Please update your selection.`);
-  return;
-}
+  if (contradiction) {
+    alert(`Oops! You've selected contradictory options: "${contradiction[0]}" and "${contradiction[1]}". Please update your selection.`);
+    return;
+  }
 
 showResult();
 goToStep(2);  // 🔄 move to result summary step
@@ -417,25 +417,30 @@ habitIds.forEach(habitId => {
   habitPicker.appendChild(btn);
 });
 
+const contradictions = [
+  ['sleep_good', 'sleep_poor'],
+  ['eat_regular', 'skip_meals'],
+  ['active', 'no_movement'],
+  ['screen_breaks', 'high_screen'],
+  ['no_smoke', 'smoking'],
+  ['stable_home', 'unstable_housing'],
+  ['enough_income', 'low_income'],
+  ['mentally_well', 'mental_health'],
+  ['no_care', 'carer']
+];
+
+function findContradiction(selectedIds) {
+  for (const pair of contradictions) {
+    if (selectedIds.includes(pair[0]) && selectedIds.includes(pair[1])) {
+      return pair;
+    }
+  }
+  return null;
+}
+
 function checkContradictions(type) {
-  const contradictions = [
-    ['sleep_good', 'sleep_poor'],
-    ['eat_regular', 'skip_meals'],
-    ['active', 'no_movement'],
-    ['screen_breaks', 'high_screen'],
-    ['no_smoke', 'smoking'],
-    ['stable_home', 'unstable_housing'],
-    ['enough_income', 'low_income'],
-    ['mentally_well', 'mental_health'],
-    ['no_care', 'carer']
-  ];
-
   const selected = type === 'choice' ? selectedChoices : selectedChances;
-  const other = type === 'choice' ? 'chances' : 'choices';
-
-  const hasContradiction = contradictions.some(([a, b]) =>
-    selected.includes(a) && selected.includes(b)
-  );
+  const hasContradiction = !!findContradiction(selected);
 
   // Show/hide correct warning
   document.getElementById('warningChoices').classList.toggle('hidden', !(type === 'choice' && hasContradiction));
