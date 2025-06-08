@@ -457,8 +457,22 @@ function checkContradictions(type) {
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
+function typeTagline() {
+  const el = document.getElementById('introTaglineText');
+  if (!el) return;
+  const text = el.textContent;
+  el.textContent = '';
+  let i = 0;
+  const interval = setInterval(() => {
+    el.textContent += text.charAt(i);
+    i++;
+    if (i >= text.length) clearInterval(interval);
+  }, 40);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
   renderOptions();
+  typeTagline();
 });
 
 
