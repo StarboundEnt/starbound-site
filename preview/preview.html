@@ -8,55 +8,54 @@
 </head>
 <body>
   <main class="container">
-<section id="step1">
 
-    <h1>Build Your Complexity Profile</h1>
 
-    <div class="demo-instructions">
-  <h3>🕹️ How to try the demo</h3>
-  <ol>
-    <li><strong>Pick 2 “Choices”</strong> (your behaviours)</li>
-    <li><strong>Pick 2 “Chances”</strong> (your circumstances)</li>
-    <li><strong>Click “Generate Profile”</strong> to reveal your personalised summary</li>
-    <li><strong>Explore the features below!</strong> See how your profile shapes:</li>
-    <ul>
-      <li>🌤️ <strong>Your Health Forecast</strong></li>
-      <li>🔍 <strong>Ask Starbound</strong></li>
-    </ul>
-    <li><strong>Try different combos</strong> to see how your support changes</li>
-  </ol>
+  <section id="Step0">
+  <h1>Starbound Simulator</h1>
+<p class="section-description" style="margin-bottom: 1rem;">
+  <em>This is just a demo — not a diagnostic tool or medical advice. It gives a sneak peek into how Starbound personalises support based on your daily habits and circumstances. </em>
+</p>
+
+<div class="card demo-instructions" style="margin-bottom: 2rem;">
+  <h3><strong>Try it out:</strong></h3>
+  <ul class="demo-steps">
+    <li><strong>Pick <span class="highlight">2 choices</strong> (your habits)</li>
+    <li><strong>Pick <span class="highlight">2 chances</strong> (your context)</li>
+    <li><strong>Hit <span class="highlightorange">"Generate Profile"</strong> to unlock your custom preview</li>
+      <li>Then see how Starbound adapts:</li>
+      <ul class="sub-steps">
+        <li>🌤️ Health Forecast</li>
+        <li>🔍 Ask Starbound</li>
+      </ul>
+    </li>
+  </ul>
 </div>
-
-
-    <p class="section-description">
-  First, build a complexity profile. Don’t worry — it doesn’t need to be perfectly accurate.  
-  This is just to show how your choices and circumstances affect the features we offer in Starbound.
-</p>
-
-    <p class="disclaimer">
-This is just a demo. It’s not a diagnostic tool or medical advice — it’s a preview of how the Starbound app personalises support using your complexity profile.
-</p>
-
-
-<section id="choicesSection">
-  <h2>Choices (choose 2, please)</h2>
-  <div class="options-grid" id="choicesOptions"></div>
-  <p id="warningChoices" class="hidden warning-text">
-    ⚠️ Some of your selections in "Choices" might contradict each other — this is okay for demo purposes, but the real app will try to avoid this!
-  </p>
-</section>
-
-<section id="chancesSection">
-  <h2>Chances (choose 2, please)</h2>
-  <div class="options-grid" id="chancesOptions"></div>
-  <p id="warningChances" class="hidden warning-text">
-    ⚠️ Some of your selections in "Chances" might contradict each other — this is okay for demo purposes, but the real app will try to avoid this!
-  </p>
+<button onclick="goToStep(1)">Get Started</button>
 </section>
 
 
-    <button id="generateBtn" disabled>🚀 Generate Profile</button>
+<section id="step1" class="hidden">
+  <h1>Build Your Complexity Profile</h1>
+
+  <section id="choicesSection">
+    <h2>Choices (choose 2, please)</h2>
+    <div class="options-grid" id="choicesOptions"></div>
+    <p id="warningChoices" class="hidden warning-text">
+      ⚠️ Some of your selections in "Choices" might contradict each other — this is okay for demo purposes, but the real app will try to avoid this!
+    </p>
   </section>
+
+  <section id="chancesSection">
+    <h2>Chances (choose 2, please)</h2>
+    <div class="options-grid" id="chancesOptions"></div>
+    <p id="warningChances" class="hidden warning-text">
+      ⚠️ Some of your selections in "Chances" might contradict each other — this is okay for demo purposes, but the real app will try to avoid this!
+    </p>
+  </section>
+
+  <button id="generateBtn" disabled>🚀 Generate Profile</button>
+</section>
+
 
   <section id="step2" class="hidden">
     <section id="resultSection" class="hidden">

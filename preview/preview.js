@@ -225,11 +225,13 @@ let selectedChances = [];
 let currentProfile = '';
 
 function goToStep(stepNumber) {
-  for (let i = 1; i <= 3; i++) {
-    document.getElementById(`step${i}`).classList.add('hidden');
-  }
-  document.getElementById(`step${stepNumber}`).classList.remove('hidden');
+  const allSteps = document.querySelectorAll('[id^="step"]');
+  allSteps.forEach(step => step.classList.add('hidden'));
+
+  const target = document.getElementById(`step${stepNumber}`);
+  if (target) target.classList.remove('hidden');
 }
+
 
 function renderOptions() {
   const choicesDiv = document.getElementById('choicesOptions');
