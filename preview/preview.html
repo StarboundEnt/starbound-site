@@ -10,14 +10,16 @@
   <main class="container">
 
 
-  <section id="Step0">
+  <section id="step0">
   <h1>Starbound Simulator</h1>
-<p class="section-description" style="margin-bottom: 1rem;">
-  <em>This is just a demo — not a diagnostic tool or medical advice. It gives a sneak peek into how Starbound personalises support based on your daily habits and circumstances. </em>
-</p>
+  <p class="section-description intro-tagline" style="margin-bottom: 1rem;">
+    <strong>This demo shows how Starbound adapts to real-life complexity.</strong>
+  </p>
+    <em id="introTaglineText">This is just a demo — not a diagnostic tool or medical advice. It gives a sneak peek into how Starbound personalises support based on your daily habits and circumstances.</em>
+  </p>
+</section>
 
 <div class="card demo-instructions" style="margin-bottom: 2rem;">
-  <h3><strong>Try it out:</strong></h3>
   <ul class="demo-steps">
     <li><strong>Pick <span class="highlight">2 choices</strong> (your habits)</li>
     <li><strong>Pick <span class="highlight">2 chances</strong> (your context)</li>
@@ -30,7 +32,7 @@
     </li>
   </ul>
 </div>
-<button onclick="goToStep(1)">Get Started</button>
+<button onclick="goToStep(1)" aria-label="Start the demo">Get Started</button>
 </section>
 
 

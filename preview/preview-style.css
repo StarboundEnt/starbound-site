@@ -18,8 +18,8 @@ body {
 }
 
 .card .demo-steps li::before {
-  content: "• ";
-  color: #f5e6ca;
+  content: "✦";
+  color: #ff4da6;
   display: inline-block;
   width: 1.2rem;
   margin-right: 0.5rem;
@@ -34,13 +34,13 @@ body {
 }
 
 .card .sub-steps li::before {
-  content: "◦ ";
-  color: #f5e6ca;
+  content: "✧";
+  color: #008bf8;
   display: inline-block;
   width: 1.2rem;
   margin-right: 0.5rem;
-  filter: drop-shadow(0 0 4px #00f5d4);
-}
+  filter: drop-shadow(0 0 4px #9b5de5);
+  }
 
 .card.demo-instructions {
   max-width: 540px;
@@ -107,6 +107,82 @@ h1, h2 {
   justify-content: center;
   gap: 1rem;
   padding: 1rem 0;
+}
+
+
+
+
+/* --- Intro / Step0 Styling --- */
+#Step0 {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 3rem;
+  text-align: center;
+}
+
+#Step0 h1 {
+  font-family: 'Lexend', sans-serif;
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+#Step0 .intro-tagline {
+  font-family: 'Space Mono', monospace;
+  max-width: 720px;
+  margin: 0 auto 1rem auto;
+  animation: fadeIn 0.6s ease forwards;
+  animation-delay: 0.1s;
+}
+
+#Step0 .demo-instructions {
+  background: rgba(31, 1, 80, 0.85);
+  border: 1px solid rgba(155, 93, 229, 0.5);
+  box-shadow: 0 0 20px rgba(155, 93, 229, 0.5);
+  border-radius: 1.5rem;
+  padding: 2rem 3rem;
+  animation: fadeIn 0.6s ease forwards, pulseGlow 4s ease-in-out infinite;
+  animation-delay: 0.2s, 0.2s;
+}
+
+#Step0 button {
+  background-color: #ff6b35;
+  color: #1f0150;
+  border: none;
+  border-radius: 999px;
+  padding: 0.75rem 2rem;
+  font-size: 1.125rem;
+  font-family: 'Space Mono', monospace;
+  margin-top: 1.5rem;
+  box-shadow: 0 0 20px rgba(155, 93, 229, 0.5);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  animation: fadeIn 0.6s ease forwards, pulseBtn 2s ease-in-out infinite;
+  animation-delay: 0.4s, 0.4s;
+}
+
+#Step0 button:hover {
+  box-shadow: 0 0 30px rgba(155, 93, 229, 0.8);
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseBtn {
+  0%,100% { transform: scale(1); }
+  50%     { transform: scale(1.05); }
+}
+
+@keyframes pulseGlow {
+  0%,100% { box-shadow: 0 0 20px rgba(155, 93, 229, 0.5); }
+  50%     { box-shadow: 0 0 30px rgba(155, 93, 229, 0.8); }
 }
 
 
