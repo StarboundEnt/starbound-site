@@ -838,6 +838,34 @@ body {
   
   
 @media (max-width: 768px) {
+  .problem-grid {
+    grid-template-columns: 1fr;
+    padding: 4rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .problem-heading {
+    padding-top: 4rem;
+  }
+
+  .main-heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .problem-text {
+    text-align: center;
+  }
+  
+  .problem-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .pull-quote {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
   .card-body-grid {
     flex-direction: column;
     gap: 1.5rem;
