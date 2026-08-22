@@ -24,9 +24,10 @@ function renderAction(){
 $('#exploreButton').addEventListener('click',renderAction);
 $('#closeAction').addEventListener('click',()=>$('#actionView').classList.remove('open'));
 $('#noteButton').addEventListener('click',()=>{$('#noteStatus').textContent='Added to this demo planning session.';setTimeout(()=>$('#noteStatus').textContent='',2800)});
-$('#privacyButton').addEventListener('click',()=>$('#privacyDialog').showModal());
-$('#privacyClose').addEventListener('click',()=>$('#privacyDialog').close());
-$('#privacyDialog').addEventListener('click',event=>{if(event.target===$('#privacyDialog'))$('#privacyDialog').close()});
+const privacyTrigger=$('#privacyButton')||$('#ctaPrivacy');
+privacyTrigger?.addEventListener('click',()=>$('#privacyDialog')?.showModal());
+$('#privacyClose')?.addEventListener('click',()=>$('#privacyDialog')?.close());
+$('#privacyDialog')?.addEventListener('click',event=>{if(event.target===$('#privacyDialog'))$('#privacyDialog').close()});
 $('#walkthroughRequest')?.addEventListener('click',()=>$('#walkthroughDialog').showModal());
 $('#walkthroughClose')?.addEventListener('click',()=>$('#walkthroughDialog').close());
 $('#walkthroughDialog')?.addEventListener('click',event=>{if(event.target===$('#walkthroughDialog'))$('#walkthroughDialog').close()});
