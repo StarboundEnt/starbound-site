@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1f0150" />
+  <title>Starbound Provider View - Community signals</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="provider.css" />
+  <link rel="stylesheet" href="analytics.css" />
+  <link rel="stylesheet" href="professional.css" />
+  <link rel="stylesheet" href="population.css" />
+  <link rel="stylesheet" href="explainer.css" />
+  <link rel="stylesheet" href="../demo-brand.css" />
+  <style>.signal-card[aria-pressed="true"]{border-color:var(--aqua);background:#2b1260;transform:translateX(4px)}</style>
+</head>
+<body>
+  <div class="blueprint-parallax" aria-hidden="true">
+    <span class="parallax-grid parallax-grid-fine"></span>
+    <span class="parallax-grid parallax-grid-major"></span>
+    <span class="parallax-mark parallax-mark-a"></span>
+    <span class="parallax-mark parallax-mark-b"></span>
+  </div>
+  <a class="skip-link" href="#workspace">Skip to signals</a>
+  <header class="topbar">
+    <a class="brand" href="../" aria-label="Starbound home"><img src="../logo.png" alt="" /><span>starbound</span></a>
+    <div class="demo-label"><span></span> Interactive prototype</div>
+    <a class="demo-switch" href="../demo/">Open personal demo</a>
+  </header>
+
+  <aside class="privacy-bar">
+    <strong>Privacy boundary active</strong>
+    <span>No individual stories, names or records are visible. Groups below 20 are suppressed.</span>
+  </aside>
+
+  <main id="workspace">
+    <section class="data-journey" aria-labelledby="journeyTitle">
+      <header class="journey-copy">
+        <div><h2 id="journeyTitle">The story stays with the person.<br /><em>The pattern can travel.</em></h2><p class="journey-support">After validation, providers see the shape of a shared barrier, and a sharper question to ask about it. Individual records never leave the person they belong to.</p></div>
+        <div class="journey-controls">
+          <p id="journeyNarration" aria-live="polite">A person asks Starbound a question in their own words.</p>
+          <button id="journeyToggle" type="button" aria-pressed="false"><span class="replay-icon" aria-hidden="true">↻</span> Replay the journey</button>
+        </div>
+      </header>
+
+      <div class="journey-stage" id="journeyStage" data-step="0">
+        <div class="journey-progress" aria-hidden="true"><span></span></div>
+        <svg class="sketch-threads" viewBox="0 0 1200 620" preserveAspectRatio="none" aria-hidden="true">
+          <defs><filter id="sketchWobble"><feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="7" result="noise"/><feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2"/></filter></defs>
+          <g class="phone-threads">
+            <path class="thread-cost" d="M64 122Q330 120 594 300"/><path class="thread-travel" d="M220 83Q390 135 594 300"/>
+            <path class="thread-energy" d="M390 145Q465 210 594 300"/><path class="thread-cost" d="M53 352Q330 360 594 300"/>
+            <path class="thread-travel" d="M395 350Q480 330 594 300"/><path class="thread-energy" d="M335 500Q470 410 594 300"/>
+            <path class="thread-care" d="M90 505Q350 435 594 300"/>
+          </g>
+          <g class="signal-threads"><path class="thread-cost" d="M618 300Q715 160 805 145"/><path class="thread-energy" d="M618 300Q810 360 935 425"/><path class="thread-care" d="M618 300Q930 150 1090 120"/><path class="thread-travel" d="M618 300Q735 400 785 460"/></g>
+        </svg>
+        <div class="people-field" aria-label="Many people using Starbound privately">
+          <div class="community-phone cp-1" aria-hidden="true"><img class="device-art" src="devices/low-battery-phone.png" alt="" /></div>
+          <div class="community-phone cp-2" aria-hidden="true"><img class="device-art" src="devices/accessibility-tablet.png" alt="" /></div>
+          <div class="community-phone cp-3" aria-hidden="true"><img class="device-art" src="devices/feature-phone.png" alt="" /></div>
+          <div class="community-phone cp-4" aria-hidden="true"><img class="device-art" src="devices/cracked-phone.png" alt="" /></div>
+          <div class="community-phone cp-5" aria-hidden="true"><img class="device-art" src="devices/offline-foldable.png" alt="" /></div>
+          <div class="community-phone cp-6" aria-hidden="true"><img class="device-art" src="devices/older-3g-phone.png" alt="" /></div>
+          <div class="community-phone cp-7" aria-hidden="true"><img class="device-art" src="devices/shared-device.png" alt="" /></div>
+          <div class="hero-phone" aria-hidden="true">
+            <img class="hero-device-art" src="devices/main-starbound-phone.png" alt="" />
+            <span class="phone-notch"></span>
+            <div class="hero-question">How can I get support<br />without another trip?</div>
+            <div class="hero-answer"><b>Start with what’s reachable.</b><small>Here are two options that don’t add travel…</small></div>
+            <div class="hero-context"><i>transport</i><i>cost</i><i>energy</i></div>
+            <span class="home-dot"></span>
+          </div>
+        </div>
+
+        <div class="privacy-gate" aria-label="Privacy and consent boundary">
+          <img class="privacy-logo" src="blue-logo.png" alt="" aria-hidden="true" />
+          <div class="gate-token gt-1" aria-hidden="true">cost</div>
+          <div class="gate-token gt-2" aria-hidden="true">transport</div>
+          <div class="gate-token gt-3" aria-hidden="true">energy</div>
+        </div>
+
+        <div class="signals-field" aria-label="Aggregated shared signal space">
+          <svg class="signal-map" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+            <g class="map-paper">
+              <path class="map-land" d="M5 25C12 9 28 5 41 14c10 7 7 20 17 25 9 5 18-5 30 0 12 5 13 20 5 29-8 8-9 22-23 26-13 4-20-8-31-11-12-4-21 7-30-4-10-11-5-25 0-34 4-7-8-10-4-20Z"/>
+              <path class="map-island" d="M80 12c5-5 13-3 15 3 2 5-2 11-8 11-7 0-12-8-7-14Z"/>
+              <path class="map-river" d="M12 18c15 14 11 27 27 34 14 7 24 4 36 17 6 6 8 13 10 20"/>
+              <path class="map-boundary" d="M26 9c1 15 9 20 8 35S25 68 28 84M53 18c-4 14 4 25 3 39-1 11-7 20-5 31M77 38c-7 9-6 18-2 29"/>
+            </g>
+            <g class="network-links">
+              <path d="M13 22 37 19 62 22 87 20M13 22 15 49 13 77M37 19 39 47 37 75M62 22 63 49 62 77M87 20 87 47 87 75M15 49 39 47 63 49 87 47M13 77 37 75 62 77 87 75M13 22 39 47 62 22M37 19 63 49 87 20M15 49 37 75 63 49 87 75"/>
+              <path class="branch" d="M13 22 5 13M13 22 5 30M37 19 31 8M37 19 45 10M62 22 55 12M62 22 71 10M87 20 96 11M87 20 96 29M15 49 5 43M15 49 5 58M39 47 31 38M39 47 47 56M63 49 55 59M63 49 72 39M87 47 96 40M87 47 97 56M13 77 5 69M13 77 6 88M37 75 30 88M37 75 47 87M62 77 55 90M62 77 71 89M87 75 96 68M87 75 96 87"/>
+            </g>
+            <g class="network-nodes">
+              <circle class="hub" cx="13" cy="22" r="1.5"/><circle class="hub" cx="37" cy="19" r="1.5"/><circle class="hub" cx="62" cy="22" r="1.5"/><circle class="hub" cx="87" cy="20" r="1.5"/>
+              <circle class="hub" cx="15" cy="49" r="1.5"/><circle class="hub" cx="39" cy="47" r="1.5"/><circle class="hub" cx="63" cy="49" r="1.5"/><circle class="hub" cx="87" cy="47" r="1.5"/>
+              <circle class="hub" cx="13" cy="77" r="1.5"/><circle class="hub" cx="37" cy="75" r="1.5"/><circle class="hub" cx="62" cy="77" r="1.5"/><circle class="hub" cx="87" cy="75" r="1.5"/>
+              <circle cx="5" cy="13" r=".8"/><circle cx="5" cy="30" r=".8"/><circle cx="31" cy="8" r=".8"/><circle cx="45" cy="10" r=".8"/><circle cx="55" cy="12" r=".8"/><circle cx="71" cy="10" r=".8"/><circle cx="96" cy="11" r=".8"/><circle cx="96" cy="29" r=".8"/>
+              <circle cx="5" cy="43" r=".8"/><circle cx="5" cy="58" r=".8"/><circle cx="31" cy="38" r=".8"/><circle cx="47" cy="56" r=".8"/><circle cx="55" cy="59" r=".8"/><circle cx="72" cy="39" r=".8"/><circle cx="96" cy="40" r=".8"/><circle cx="97" cy="56" r=".8"/>
+              <circle cx="5" cy="69" r=".8"/><circle cx="6" cy="88" r=".8"/><circle cx="30" cy="88" r=".8"/><circle cx="47" cy="87" r=".8"/><circle cx="55" cy="90" r=".8"/><circle cx="71" cy="89" r=".8"/><circle cx="96" cy="68" r=".8"/><circle cx="96" cy="87" r=".8"/>
+            </g>
+          </svg>
+          <div class="catchment-map-art">
+            <img src="signals/catchment-map-transparent.png" alt="Fictional grey service-area map with six coloured determinant hubs and small behaviour symbols" />
+          </div>
+          <div class="signal-circle sc-cost" style="--fill-level:72%"><div class="signal-art"><img class="signal-shadow" src="signals/cost.png" alt="" /><img class="signal-colour" src="signals/cost.png" alt="" /></div><span>Cost pressure</span><strong>34%</strong></div>
+          <div class="signal-circle sc-income" style="--fill-level:64%"><div class="signal-art"><img class="signal-shadow" src="signals/income.png" alt="" /><img class="signal-colour" src="signals/income.png" alt="" /></div><span>Income</span><strong>29%</strong></div>
+          <div class="signal-circle sc-care" style="--fill-level:58%"><div class="signal-art"><img class="signal-shadow" src="signals/care.png" alt="" /><img class="signal-colour" src="signals/care.png" alt="" /></div><span>Caring load</span><strong>27%</strong></div>
+          <div class="signal-circle sc-gender" style="--fill-level:31%"><div class="signal-art"><img class="signal-shadow" src="signals/gender.png" alt="" /><img class="signal-colour" src="signals/gender.png" alt="" /></div><span>Gender + identity</span><strong>14%</strong></div>
+          <div class="signal-circle sc-culture" style="--fill-level:49%"><div class="signal-art"><img class="signal-shadow" src="signals/culture.png" alt="" /><img class="signal-colour" src="signals/culture.png" alt="" /></div><span>Culture</span><strong>23%</strong></div>
+          <div class="signal-circle sc-healthcare" style="--fill-level:56%"><div class="signal-art"><img class="signal-shadow" src="signals/healthcare.png" alt="" /><img class="signal-colour" src="signals/healthcare.png" alt="" /></div><span>Healthcare access</span><strong>26%</strong></div>
+          <div class="signal-circle sc-education" style="--fill-level:35%"><div class="signal-art"><img class="signal-shadow" src="signals/education.png" alt="" /><img class="signal-colour" src="signals/education.png" alt="" /></div><span>Education</span><strong>16%</strong></div>
+          <div class="signal-circle sc-environment" style="--fill-level:47%"><div class="signal-art"><img class="signal-shadow" src="signals/environment.png" alt="" /><img class="signal-colour" src="signals/environment.png" alt="" /></div><span>Environment</span><strong>22%</strong></div>
+          <div class="signal-circle sc-travel" style="--fill-level:41%"><div class="signal-art"><img class="signal-shadow" src="signals/travel.png" alt="" /><img class="signal-colour" src="signals/travel.png" alt="" /></div><span>Travel</span><strong>19%</strong></div>
+          <div class="signal-circle sc-energy" style="--fill-level:67%"><div class="signal-art"><img class="signal-shadow" src="signals/capacity.png" alt="" /><img class="signal-colour" src="signals/capacity.png" alt="" /></div><span>Low capacity</span><strong>31%</strong></div>
+          <div class="signal-circle sc-housing" style="--fill-level:52%"><div class="signal-art"><img class="signal-shadow" src="signals/housing.png" alt="" /><img class="signal-colour" src="signals/housing.png" alt="" /></div><span>Housing</span><strong>24%</strong></div>
+          <div class="signal-circle sc-food" style="--fill-level:60%"><div class="signal-art"><img class="signal-shadow" src="signals/food.png" alt="" /><img class="signal-colour" src="signals/food.png" alt="" /></div><span>Food access</span><strong>28%</strong></div>
+          <div class="signal-circle sc-small"><span>Hidden</span><small>&lt;20 people</small></div>
+          <div class="signals-caption"><strong>Patterns become visible</strong><span>Circle size shows how often a context appears, not individual risk.</span></div>
+        </div>
+      </div>
+
+      <ol class="journey-steps" aria-label="Explainer steps">
+        <li class="active"><button data-journey-step="0"><span>1</span>One person searches</button></li>
+        <li><button data-journey-step="1"><span>2</span>Many people contribute</button></li>
+        <li><button data-journey-step="2"><span>3</span>Signals aggregate</button></li>
+      </ol>
+      <p class="journey-caveat">This shows how the privacy model is meant to work. It's a mock-up, not a live pipeline. Production would still need real consent flows, governance, suppression and security built underneath it.</p>
+    </section>
+
+    <section class="signal-room" aria-labelledby="signalsTitle">
+      <header class="section-head">
+        <div><p class="eyebrow">Provider analytics</p><h2 id="signalsTitle">Community signal workspace</h2></div>
+        <div class="legend"><span><i class="high"></i>Ready to explore</span><span><i class="watch"></i>Keep watching</span></div>
+      </header>
+
+      <div class="population-workspace">
+        <div class="population-meta"><span>STARBOUND / POPULATION INSIGHT</span><span>Illustrative cohort data · no individual records</span></div>
+        <div class="workspace-mode-tabs" role="tablist" aria-label="Community signal workspace views"><button class="active" type="button" role="tab" aria-selected="true" data-workspace-view="inbox">Signal Inbox <span>8</span></button><button type="button" role="tab" aria-selected="false" data-workspace-view="canvas">Investigation Canvas</button></div>
+
+        <section class="workspace-mode-panel active" id="signalInbox" data-workspace-panel="inbox" role="tabpanel">
+          <header class="inbox-header"><div><span>Emerging signals</span><h3>What needs attention?</h3><p>Prioritised patterns that have met enough checks to review, or need more time.</p></div><div class="inbox-counts"><span><i></i>Ready to explore <b>3</b></span><span><i></i>Keep watching <b>5</b></span></div></header>
+          <aside class="workspace-segment-note segment-right inbox-status-pills-note"><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg><div><strong>What the pills mean</strong><span>Ready to explore passed all checks. Keep watching still needs time or evidence.</span></div></aside>
+          <aside class="workspace-segment-note segment-left inbox-columns-note"><div><strong>Reading the columns</strong><span>Signal is what is tracked, Trend shows the shape, Change shows the shift, and Status shows whether it is green or amber.</span></div><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg></aside>
+          <aside class="workspace-segment-note segment-left inbox-sparkline-note"><div><strong>Shape check</strong><span>A steady climb, sudden jump, or plateau can mean different things, even with the same percentage change.</span></div><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg></aside>
+          <aside class="workspace-segment-note segment-left inbox-status-dot-note"><div><strong>Confidence colour</strong><span>Green or amber reflects confidence in the pattern, not how serious the underlying issue is.</span></div><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg></aside>
+          <aside class="workspace-segment-note segment-right inbox-selected-note"><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg><div><strong>Selected signal detail</strong><span>Click a row to preview the full investigation detail.</span></div></aside>
+          <aside class="workspace-segment-note segment-right inbox-chart-note"><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg><div><strong>Two lines over time</strong><span>The sequence matters: which line moved first tells the story.</span></div></aside>
+          <aside class="workspace-segment-note segment-right inbox-validation-note"><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg><div><strong>Quick validation read</strong><span>A compact trust check before opening the full picture.</span></div></aside>
+          <aside class="workspace-segment-note segment-right inbox-question-note"><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg><div><strong>Question preview</strong><span>The planning question this signal raises.</span></div></aside>
+          <aside class="workspace-segment-note segment-right inbox-open-note"><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg><div><strong>Open the full breakdown</strong><span>Go to trend, drivers, population and response.</span></div></aside>
+          <div class="signal-inbox-layout">
+            <article class="signal-inbox-list" aria-label="Emerging signal list">
+              <div class="inbox-table-head"><span>Signal</span><span>Trend</span><span>Change</span><span>Status</span></div>
+              <button class="active" type="button" data-inbox-signal="access"><span><b>Free and confidential support questions</b><small>Rising before urgent and after-hours questions</small></span><svg viewBox="0 0 80 26" aria-hidden="true"><path d="M2 22 14 17 25 19 37 11 49 13 61 6 78 3"/></svg><strong>+24%</strong><i class="ready"></i></button>
+              <button type="button" data-inbox-signal="sleep"><span><b>Sleep difficulty conversations</b><small>Increasing among young people</small></span><svg viewBox="0 0 80 26" aria-hidden="true"><path d="M2 21 14 18 25 20 37 13 49 15 61 8 78 6"/></svg><strong>+18%</strong><i class="ready"></i></button>
+              <button type="button" data-inbox-signal="study"><span><b>Work and study strain</b><small>Mentions increasing together</small></span><svg viewBox="0 0 80 26" aria-hidden="true"><path d="M2 20 14 21 25 15 37 18 49 10 61 12 78 8"/></svg><strong>+15%</strong><i class="watch"></i></button>
+              <button type="button" data-inbox-signal="eating"><span><b>Eating concerns</b><small>Rising among teen cohorts</small></span><svg viewBox="0 0 80 26" aria-hidden="true"><path d="M2 22 14 19 25 21 37 17 49 12 61 14 78 9"/></svg><strong>+12%</strong><i class="watch"></i></button>
+              <button type="button" data-inbox-signal="loneliness"><span><b>Loneliness and isolation</b><small>Mentions broadening geographically</small></span><svg viewBox="0 0 80 26" aria-hidden="true"><path d="M2 18 14 20 25 16 37 19 49 13 61 15 78 11"/></svg><strong>+11%</strong><i class="watch"></i></button>
+              <button type="button" data-inbox-signal="travel"><span><b>Travel barriers</b><small>Closer-to-home care requested</small></span><svg viewBox="0 0 80 26" aria-hidden="true"><path d="M2 21 14 18 25 18 37 15 49 17 61 12 78 10"/></svg><strong>+9%</strong><i class="watch"></i></button>
+              <button type="button" data-inbox-signal="selfharm"><span><b>Self-harm information searches</b><small>Elevated but still under review</small></span><svg viewBox="0 0 80 26" aria-hidden="true"><path d="M2 23 14 22 25 17 37 20 49 11 61 13 78 5"/></svg><strong>+14%</strong><i class="ready"></i></button>
+              <button type="button" data-inbox-signal="bereavement"><span><b>Bereavement support needs</b><small>Small persistent movement</small></span><svg viewBox="0 0 80 26" aria-hidden="true"><path d="M2 20 14 20 25 18 37 19 49 16 61 14 78 13"/></svg><strong>+6%</strong><i class="watch"></i></button>
+            </article>
+            <article class="inbox-detail" aria-live="polite">
+              <div class="inbox-detail-top"><span id="inboxStatus">Ready to explore · illustrative</span><strong id="inboxDelta">+24%</strong></div><h3 id="inboxTitle">Free and confidential support questions are rising before urgent and after-hours questions.</h3><p id="inboxSummary">Cost, privacy and service access appear repeatedly across the related health-question groups.</p>
+              <div class="inbox-mini-chart"><header><span>Eight-week trend</span><small id="inboxCohort">Youth 16-24 · North River</small></header><div class="inbox-chart-legend" aria-label="Trend line legend"><span class="legend-primary"><i aria-hidden="true"></i><b id="inboxPrimaryLegend">Free + confidential support</b></span><span class="legend-secondary"><i aria-hidden="true"></i><b id="inboxSecondaryLegend">Urgent + after-hours support</b></span></div><svg viewBox="0 0 520 170" role="img" aria-label="Eight-week comparison of the leading and related health-question signals"><g><path d="M30 35H500M30 80H500M30 125H500"/></g><path class="main" d="M30 128C80 117 105 103 145 108s75-31 116-18 68-25 112-19 72-34 127-45"/><path class="compare" d="M30 139C80 137 110 134 145 135s77-5 116-4 72-16 112-26 73-18 127-25"/></svg></div>
+              <div class="inbox-detail-lower"><div class="inbox-validation"><span>Validation</span><strong id="inboxChecks">5 / 5 checks passed</strong><div><i>✓</i> Privacy</div><div><i>✓</i> Persistence</div><div><i>✓</i> Corroboration</div><div><i>✓</i> Equity</div></div><div class="inbox-question"><span>Planning question</span><p id="inboxQuestion">Why are more young people seeking free and confidential support before urgent help?</p></div></div>
+              <button class="open-investigation" id="openInvestigation" type="button">Open investigation <span>→</span></button>
+            </article>
+          </div>
+        </section>
+
+        <section class="workspace-mode-panel" id="investigationCanvas" data-workspace-panel="canvas" role="tabpanel" hidden>
+        <div class="canvas-route"><button type="button" id="backToInbox">← Signal Inbox</button><div><span>Selected signal</span><strong id="canvasSignalName">Free and confidential mental-health support</strong></div><ol><li class="active">Trends<small>Detect</small></li><li>Drivers<small>Explore</small></li><li>Population<small>Review</small></li><li>Response<small>Plan</small></li></ol></div>
+        <div class="population-tabs" role="tablist" aria-label="Population insight panels">
+          <button class="population-tab" type="button" role="tab" aria-selected="true" data-pop-tab="signals">Trends</button>
+          <button class="population-tab" type="button" role="tab" aria-selected="false" data-pop-tab="drivers">Drivers</button>
+          <button class="population-tab" type="button" role="tab" aria-selected="false" data-pop-tab="map">Population Overview</button>
+          <button class="population-tab" type="button" role="tab" aria-selected="false" data-pop-tab="action">Response Planning</button>
+        </div>
+
+        <section class="population-panel" data-pop-panel="map" role="tabpanel" hidden>
+          <header class="population-heading"><div><span class="panel-number">03 / Signal Distribution</span><h3>Where are these drivers most visible?</h3><p>See how the selected signal and its associated drivers vary across areas and cohorts.</p></div><div class="illustrative-stamp">Illustrative<br/>not real data</div></header>
+          <aside class="panel-scribble panel-title-note map-note"><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg><div><strong>Where is the pattern showing up?</strong><span>For providers: see which areas or cohorts may need a closer look.</span></div></aside>
+          <aside class="panel-scribble panel-note-left map-visual-note"><div><strong>Map colour shows signal change.</strong><span>The side bars show the same driver mix from the previous panel.</span></div><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg></aside>
+          <aside class="workspace-segment-note segment-left map-view-explainer"><div><strong>Three ways to group the map</strong><span>Switch between service catchments, cohorts of young people, or age bands without changing the signal being explored.</span></div><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg></aside>
+          <aside class="workspace-segment-note segment-left map-selector-explainer"><div><strong>Select a service area</strong><span>Choosing an area updates its percentage, driver breakdown and contribution count on the right.</span></div><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg></aside>
+          <aside class="workspace-segment-note segment-left map-shading-explainer"><div><strong>What the shading means</strong><span>Each shape is a service catchment. Colour shows how quickly this signal moved over eight weeks, not how many young people are affected.</span></div><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg></aside>
+          <aside class="workspace-segment-note segment-left map-markers-explainer"><div><strong>Where to look first</strong><span>Circled points mark the areas with the strongest movement, helping providers prioritise a closer look.</span></div><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg></aside>
+          <aside class="workspace-segment-note segment-right map-figures-explainer"><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg><div><strong>The same signal, filtered</strong><span>These figures carry the Trends and Drivers signal into one selected area.</span></div></aside>
+          <aside class="workspace-segment-note segment-right map-drivers-explainer"><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg><div><strong>Local driver mix</strong><span>The same choices-versus-chances breakdown, recalculated for this region. Its mix can differ from neighbouring areas.</span></div></aside>
+          <aside class="workspace-segment-note segment-right map-threshold-explainer"><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg><div><strong>Minimum cohort passed</strong><span>Enough people are represented to display this area. Below the privacy minimum, it stays blank instead of showing an unreliable result.</span></div></aside>
+          <div class="complexity-layout">
+            <article class="complexity-map-card"><div class="map-controls"><span>View by</span><button class="active" type="button" data-map-view="area">Service area</button><button type="button" data-map-view="cohort">Cohort</button><button type="button" data-map-view="age">Age band</button></div><div class="map-filter-tray" id="mapFilterTray" aria-live="polite"><span>Select an outlined area on the map</span></div><div class="complexity-map professional-map administrative-map"><img src="signals/administrative-choropleth.png" alt="Illustrative administrative choropleth showing population complexity across fictional health-service planning areas"/><button class="region-hotspot active" style="--x:70%;--y:37%" type="button" data-region="north" aria-label="Select North River"></button><button class="region-hotspot" style="--x:57%;--y:62%" type="button" data-region="central" aria-label="Select Central Plains"></button><button class="region-hotspot" style="--x:79%;--y:67%" type="button" data-region="coast" aria-label="Select South Coast"></button></div><div class="complexity-legend"><span><i class="stable"></i>Stable</span><span><i class="steady"></i>Managing</span><span><i class="stretched"></i>Stretched</span><span><i class="survival"></i>Survival</span></div><p class="conceptual-map-note" id="mapInstruction">Select an outlined area to inspect its illustrative cohort.</p></article>
+            <aside class="complexity-summary" aria-live="polite"><span class="summary-label">Selected cohort</span><h4><span id="cohortTitle">Young people aged 16-24</span><br/><span id="regionName">North River · illustrative</span></h4><div class="headline-stat"><strong id="regionComplexity">18%</strong><span>are in a Stretched or Survival state</span></div><div class="quarter-change" id="regionChange">↑ 4 points since last quarter</div><div class="state-bars"><div><span>Stable</span><i id="barStable" style="--bar:62%;--tone:#29b8a7"></i><b id="valueStable">62%</b></div><div><span>Managing</span><i id="barManaging" style="--bar:20%;--tone:#93c978"></i><b id="valueManaging">20%</b></div><div><span>Stretched</span><i id="barStretched" style="--bar:12%;--tone:#e2b54c"></i><b id="valueStretched">12%</b></div><div><span>Survival</span><i id="barSurvival" style="--bar:6%;--tone:#dc7048"></i><b id="valueSurvival">6%</b></div></div><p class="privacy-note" id="regionPrivacy">842 contributions · minimum cohort passed.</p></aside>
+          </div>
+        </section>
+
+        <section class="population-panel" data-pop-panel="drivers" role="tabpanel" hidden>
+          <header class="population-heading"><div><span class="panel-number">02 / What’s Driving It</span><h3>Choices versus chances</h3><p>The eight-week signal change is attributed across structural conditions and behavioural patterns. Select a side, then inspect a driver.</p></div></header>
+          <aside class="panel-scribble panel-title-note drivers-note"><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg><div><strong>What might be shaping the change?</strong><span>For providers: respond to the barrier, not only the behaviour.</span></div></aside>
+          <aside class="panel-scribble panel-note-left drivers-visual-note"><div><strong>The split always totals 100%.</strong><span>Choose a side, then a row, to inspect its evidence.</span></div><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg></aside>
+          <aside class="workspace-segment-note segment-left driver-split-explainer"><div><strong>Chances versus choices</strong><span>How much change is associated with circumstances around a young person versus their day-to-day behaviour. Together they make up the whole signal.</span></div><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg></aside>
+          <aside class="workspace-segment-note segment-left driver-table-explainer"><div><strong>How to read each row</strong><span>Every driver is tagged Chance or Choice. Contribution is its share of the overall shift; Change compares it with the previous check.</span></div><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg></aside>
+          <aside class="workspace-segment-note segment-left driver-change-explainer"><div><strong>The Change column</strong><span>How much each driver grew or shrank over eight weeks. A smaller contributor can still be moving quickly.</span></div><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg></aside>
+          <aside class="workspace-segment-note segment-left selected-driver-explainer"><div><strong>Selected driver</strong><span>Clicking a row opens a short explanation of how that driver appears in the underlying questions and search patterns.</span></div><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg></aside>
+          <aside class="workspace-segment-note segment-right planning-question-explainer"><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg><div><strong>Planning question</strong><span>Starbound is surfacing a question, not an answer. It should prompt organisational discussion, not action by itself.</span></div></aside>
+          <aside class="workspace-segment-note segment-right interpretation-boundary-explainer"><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg><div><strong>Interpretation boundary</strong><span>A barrier appearing does not tell you how to fix it. It tells you what may be worth investigating.</span></div></aside>
+          <article class="driver-workbench">
+            <header class="driver-workbench-head"><div><span>Share of eight-week signal change</span><h4 id="driverCategoryTitle">Most signal growth tracks to chances.</h4><p id="driverCategoryCopy">Cost, confidentiality and service availability are moving faster than individual behaviour patterns in this cohort.</p></div><small>Illustrative contribution model</small></header>
+            <div class="driver-split-bar" aria-label="Filter drivers by category"><button class="active" type="button" data-driver-category="chance" aria-pressed="true"><span>Chances</span><strong>61%</strong></button><button class="choice" type="button" data-driver-category="choice" aria-pressed="false"><span>Choices</span><strong>39%</strong></button></div>
+            <div class="driver-selection-summary"><span id="driverCategoryEyebrow">Conditions around access</span><strong><b id="driverShare">61%</b> <span id="driverCategoryLabel">Chances</span></strong></div>
+            <div class="driver-table" role="table" aria-label="Drivers of complexity growth"><div class="driver-table-head" role="row"><span role="columnheader">Driver</span><span role="columnheader">Type</span><span role="columnheader">Contribution</span><span role="columnheader">Change</span></div><div class="driver-list" role="rowgroup">
+              <button class="active" type="button" data-driver="cost" data-category="chance" role="row"><span role="cell">Cost pressure</span><em role="cell">Chance</em><span role="cell"><i style="--driver:100%"></i><b>20%</b></span><small role="cell">↑ 5 pts</small></button>
+              <button type="button" data-driver="access" data-category="chance" role="row"><span role="cell">Service access</span><em role="cell">Chance</em><span role="cell"><i style="--driver:85%"></i><b>17%</b></span><small role="cell">↑ 4 pts</small></button>
+              <button type="button" data-driver="privacy" data-category="chance" role="row"><span role="cell">Confidentiality concerns</span><em role="cell">Chance</em><span role="cell"><i style="--driver:70%"></i><b>14%</b></span><small role="cell">↑ 3 pts</small></button>
+              <button type="button" data-driver="housing" data-category="chance" role="row"><span role="cell">Housing instability</span><em role="cell">Chance</em><span role="cell"><i style="--driver:50%"></i><b>10%</b></span><small role="cell">↑ 2 pts</small></button>
+              <button class="choice" type="button" data-driver="timing" data-category="choice" role="row"><span role="cell">Help-seeking timing</span><em role="cell">Choice</em><span role="cell"><i style="--driver:75%"></i><b>15%</b></span><small role="cell">↑ 3 pts</small></button>
+              <button class="choice" type="button" data-driver="selfmanagement" data-category="choice" role="row"><span role="cell">Self-management attempts</span><em role="cell">Choice</em><span role="cell"><i style="--driver:65%"></i><b>13%</b></span><small role="cell">↑ 2 pts</small></button>
+              <button class="choice" type="button" data-driver="peer" data-category="choice" role="row"><span role="cell">Peer-led navigation</span><em role="cell">Choice</em><span role="cell"><i style="--driver:55%"></i><b>11%</b></span><small role="cell">↑ 1 pt</small></button>
+            </div></div>
+            <section class="driver-evidence" aria-live="polite"><div><span>Selected driver · <b id="selectedDriverType">Chance</b></span><h4 id="selectedDriverTitle">Cost pressure</h4><p id="selectedDriverEvidence">Requests for free, bulk-billed or no-cost support appear across three sufficiently large health-question groups.</p></div><div><small>Planning question</small><strong id="selectedDriverQuestion">Could clearer no-cost pathways reduce friction at first contact?</strong></div><p class="driver-boundary" id="driverImplication">A support pathway cannot help if it feels unaffordable, visible or out of reach.</p></section>
+          </article>
+        </section>
+
+        <section class="population-panel active live-entry" data-pop-panel="signals" role="tabpanel">
+          <div class="live-signal-strip"><span><i></i>Early movement detected</span><time>Starbound demonstration signal · illustrative</time></div>
+          <aside class="panel-scribble panel-title-note trends-note"><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg><div><strong>What is beginning to change?</strong><span>For providers: notice a pattern before it appears in service demand.</span></div></aside>
+          <aside class="workspace-segment-note segment-left early-banner-note"><div><strong>Early movement detected</strong><span>This appears when a pattern first becomes visible: noticed, but not yet confirmed or assumed to be serious.</span></div><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg></aside>
+          <aside class="workspace-segment-note segment-left signal-strip-note"><div><strong>Signal summary</strong><span>How much changed, over what period, for which young people, in which area, and how far the checks have progressed.</span></div><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg></aside>
+          <aside class="workspace-segment-note segment-right validation-grid-note"><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg><div><strong>Five validation checks</strong><span>Enough people, persistence over time, corroboration, the expected sequence, and protection for small groups. Each check shows whether it passed and why.</span></div></aside>
+          <aside class="workspace-segment-note segment-right privacy-evidence-note"><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg><div><strong>Selected privacy evidence</strong><span>The anonymous, consented contribution count and the minimum group size required before Starbound displays a result.</span></div></aside>
+          <aside class="workspace-segment-note segment-left sequence-slider-note"><div><strong>Explore the eight-week sequence</strong><span>Move back through time to see how the pattern formed, not only where it ended.</span></div><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg></aside>
+          <header class="population-heading field-note-heading"><div class="field-note-copy"><span class="panel-number">Emerging signal</span><h3 id="canvasHeroTitle">Questions about free and confidential mental-health support are rising.</h3><p id="canvasHeroSummary">Searches for affordable, private support rose 24% over eight weeks among 16-24 year-olds in North River. Urgent and after-hours searches began rising three weeks later.</p></div><div class="spread-sketch" aria-hidden="true"><svg viewBox="0 0 230 145"><path class="boundary" d="M40 24C76 7 106 20 129 34s58 2 70 29-6 57-30 65-48-8-76-2-61-23-49-49-24 8-39 3-57-18-10-45-3-15 9-31 19-43"/><g class="points"><circle cx="75" cy="54" r="3"/><circle cx="105" cy="43" r="3"/><circle cx="142" cy="56" r="3"/><circle cx="62" cy="83" r="3"/><circle cx="101" cy="77" r="8"/><circle cx="137" cy="89" r="3"/><circle cx="170" cy="73" r="3"/><circle cx="89" cy="108" r="3"/><circle cx="151" cy="112" r="3"/></g><g class="arrows"><path d="M101 66V31m0 0-7 9m7-9 7 9"/><path d="M112 74l37-27m0 0-12 2m12-2-4 11"/><path d="M112 84l37 27m0 0-4-11m4 11-12-2"/><path d="M91 84l-34 25m0 0 11-2m-11 2 4-11"/></g></svg></div><div class="field-note-evidence"><div><span>Change · 8 weeks</span><strong id="fieldNoteDelta">+24%</strong></div><div><span>Time window</span><strong>8 weeks</strong></div><div><span>Focus cohort</span><strong id="fieldNoteCohort">Youth 16-24</strong></div><div><span>Geographic scope</span><strong id="fieldNoteScope">North River</strong></div><div><span>Status</span><strong id="fieldNoteStatus">Ready to explore</strong></div></div></header>
+          <div class="emerging-layout"><article class="emerging-chart"><header><span id="canvasChartLabel">Mental-health support search intents · youth 16-24</span><small>North River · illustrative</small></header><svg viewBox="0 0 760 300" role="img" aria-label="Searches for affordable confidential mental-health support rose first, followed three weeks later by urgent and after-hours support searches"><g class="em-grid"><path d="M55 35H730M55 95H730M55 155H730M55 215H730M55 270H730"/></g><g class="signal-reveal" id="signalReveal"><path pathLength="1" class="access-line" d="M55 232C115 226 153 213 205 202s92-27 145-47 96-19 145-43 88-25 140-43 61-19 95-34"/><path pathLength="1" class="urgent-line" d="M55 242C120 241 157 239 205 237s101-6 145-8 94-14 145-39 88-28 140-44 62-23 95-34"/></g><g class="lag-marker"><path d="M382 54V248"/><rect x="390" y="55" width="172" height="35" rx="6"/><text x="403" y="70">SECOND SIGNAL</text><text x="403" y="82">BEGINS RISING · WEEK 5</text></g><g class="em-axis"><text x="52" y="292">8 weeks ago</text><text x="682" y="292">Now</text></g></svg><div class="chart-key"><span class="access" id="canvasPrimaryLegend">Free + confidential support</span><span class="urgent" id="canvasSecondaryLegend">Urgent + after-hours support</span></div><div class="timeline-control"><label for="signalWeek">Explore the eight-week sequence <output id="weekLabel">Week 8</output></label><input id="signalWeek" type="range" min="1" max="8" value="8" step="1"/><div class="timeline-detail" id="weekDetail" aria-live="polite"><strong>Week 8 · Ready to explore</strong><span>Access questions are 24% above baseline; urgent-support questions are 16% above baseline.</span></div></div></article><div class="insight-feed"><article class="priority"><div><span id="canvasStatus">Ready to explore</span><strong class="count-up" id="canvasDelta" data-count="24">+0%</strong></div><h4 id="canvasFinding">Urgent-support searches are now 16% above baseline.</h4><p id="canvasInterpretation">Two independent health-support signal groups are moving in sequence. This is worth investigating; it does not show that the same people made both searches or that one caused the other.</p><section class="validation-drawer" aria-labelledby="validationTitle"><div class="validation-heading-inline"><h5 id="validationTitle">Why should you trust this signal?</h5><span id="canvasChecksPassed">5 checks passed</span></div><div class="validation-grid"><button type="button" data-check="privacy"><i>✓</i><span><b>Privacy threshold</b>842 contributions; minimum cohort passed</span></button><button type="button" data-check="persistence"><i>✓</i><span><b>Persistence</b>Access signal present in 7 of 8 weeks</span></button><button type="button" data-check="corroboration"><i>✓</i><span><b>Corroboration</b>Multiple related health-question groups</span></button><button type="button" data-check="sequence"><i>✓</i><span><b>Sequence check</b>Second movement followed the initial rise</span></button><button type="button" data-check="equity"><i>✓</i><span><b>Equity review</b>4 areas checked; small groups suppressed</span></button></div><div class="validation-evidence" id="validationEvidence" aria-live="polite"><span>Selected evidence · Privacy threshold</span><p>842 consented contributions are included. The minimum publishable cohort is 20; no individual record is available.</p></div></section><button class="explore-signal" type="button" data-open-panel="drivers">Explore what’s driving it <span>→</span></button></article><article><div><span>Keep watching</span><strong>+12%</strong></div><h4>Questions about confidential care are broadening.</h4><p>“Can I talk to someone without my parents knowing?” now appears across three sufficiently large cohorts.</p></article><article><div><span>Keep watching</span><strong>+9%</strong></div><h4>Cost is shaping the type of help people seek.</h4><p>More questions ask for free psychologists, bulk-billed care or support without a Medicare card.</p></article></div></div>
+        </section>
+
+        <section class="population-panel" data-pop-panel="action" role="tabpanel" hidden>
+          <header class="population-heading"><div><span class="panel-number">04 / Plan a Response</span><h3>Turn a pattern into a question, not a prescription.</h3><p>This pattern is worth investigating, not acting on alone.</p></div></header>
+          <aside class="panel-scribble panel-title-note response-note"><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg><div><strong>What is the next useful question?</strong><span>For providers: plan a proportionate response without claiming cause.</span></div></aside>
+          <aside class="panel-scribble panel-note-left response-visual-note"><div><strong>Snapshot first. Reversible steps next.</strong><span>Open any row to see what to test, watch and stop.</span></div><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg></aside>
+          <aside class="workspace-segment-note segment-left response-summary-explainer"><div><strong>From observation to planning</strong><span>A plain-language summary of the signal, reframed as something the team can plan around.</span></div><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg></aside>
+          <aside class="workspace-segment-note segment-left response-categories-explainer"><div><strong>What we know and do not</strong><span>What moved, what checks support it, and what remains genuinely unknown. The gap stays visible so the tool cannot overstate its evidence.</span></div><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg></aside>
+          <aside class="workspace-segment-note segment-right response-tags-explainer"><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg><div><strong>Traceable evidence</strong><span>The signal record, assessment method and uncertainty level show where every line comes from.</span></div></aside>
+          <aside class="workspace-segment-note segment-left response-question-explainer"><div><strong>A question worth taking away</strong><span>Save one testable question to a shared planning brief instead of leaving the pattern in the dashboard.</span></div><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg></aside>
+          <aside class="workspace-segment-note segment-left response-ladder-explainer"><div><strong>Small, reversible steps</strong><span>Four stages for investigating a signal without overcommitting. Each can be undone if it is not helping.</span></div><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg></aside>
+          <aside class="workspace-segment-note segment-left response-stage-explainer"><div><strong>How every stage works</strong><span>What should appear if the pattern is real, what to watch during the test, and the condition that means stop or change course.</span></div><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg></aside>
+          <aside class="workspace-segment-note segment-right response-accountability-explainer"><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg><div><strong>Make the step accountable</strong><span>A realistic timeframe, a definition of success and a named owner keep each stage concrete.</span></div></aside>
+          <aside class="workspace-segment-note segment-left response-boundary-explainer"><div><strong>Not a causal claim</strong><span>This is a structured way to investigate a pattern, not proof that one thing caused another or a finished conclusion.</span></div><svg viewBox="0 0 92 42" aria-hidden="true"><path d="M3 7c21 0 37 3 51 12 8 5 15 10 28 9"/><path d="m72 20 11 8-12 5"/></svg></aside>
+          <article class="response-workspace">
+            <section class="decision-snapshot"><header><div><span>Selected signal</span><strong>Free and confidential support questions are rising before urgent and after-hours questions.</strong></div><div><span>Planning question</span><strong>Could clearer no-cost, confidential pathways reduce friction at first contact?</strong></div></header><div class="snapshot-rows"><div><span>What changed</span><p>Access-related questions rose first; urgent and after-hours questions followed three weeks later.</p><b>Evidence<br/>SIG-2417</b></div><div><span>What we know</span><p>The pattern persists across eight weeks, appears in sufficiently large cohorts and passes five validation checks.</p><b>Method<br/>Observational</b></div><div><span>What remains unknown</span><p>Why the pattern is occurring locally, whether information friction is a driver, and which pathways would reduce drop-off.</p><b>Uncertainty<br/>Medium</b></div></div><div class="snapshot-question"><span>Question worth investigating</span><strong>Could clearer no-cost, confidential pathways reduce friction at first contact?</strong><button type="button">Add to planning brief</button></div></section>
+            <section class="response-ladder"><header><div><span>Response ladder</span><h4>Progress through small, reversible steps.</h4></div><small>Expand a stage to inspect or adapt it</small></header>
+              <article class="response-step open"><div class="response-step-row"><button type="button" data-response-step aria-expanded="true"><i>01</i><span><strong>Verify locally</strong><small>Check the pattern against local service and partner context.</small></span><b>⌄</b></button><div><span>Timeframe</span><strong>1-2 weeks</strong></div><div><span>Success measure</span><strong>Pattern confirmed or not</strong></div><label><span>Owner</span><select aria-label="Assign owner for Verify locally"><option>Assign owner</option><option>PHN analytics lead</option><option>Service planning lead</option><option>Youth engagement lead</option></select></label></div><div class="response-step-detail"><div><span>If this pattern persists</span><p>Compare the aggregate signal with referral themes, wait-time movement and partner observations.</p></div><div><span>We would watch</span><p>Whether local evidence supports the same access and confidentiality pattern.</p></div><div><span>Stop or adapt if</span><p>The movement is not present locally or relies on a suppressed cohort.</p></div><button type="button">View supporting evidence</button></div></article>
+              <article class="response-step"><div class="response-step-row"><button type="button" data-response-step aria-expanded="false"><i>02</i><span><strong>Convene partners</strong><small>Bring youth, services and community partners around the same question.</small></span><b>⌄</b></button><div><span>Timeframe</span><strong>2-4 weeks</strong></div><div><span>Success measure</span><strong>Shared priorities recorded</strong></div><label><span>Owner</span><select aria-label="Assign owner for Convene partners"><option>Assign owner</option><option>Partnerships lead</option><option>Youth engagement lead</option><option>Clinical lead</option></select></label></div><div class="response-step-detail" hidden><div><span>If this pattern persists</span><p>Test whether cost, privacy and availability match what young people and services hear locally.</p></div><div><span>We would watch</span><p>Agreement, disagreement and missing perspectives across partner groups.</p></div><div><span>Stop or adapt if</span><p>The planning question does not reflect lived experience or local service context.</p></div><button type="button">Add partner note</button></div></article>
+              <article class="response-step"><div class="response-step-row"><button type="button" data-response-step aria-expanded="false"><i>03</i><span><strong>Test a small response</strong><small>Try one low-risk, reversible change in a priority setting.</small></span><b>⌄</b></button><div><span>Timeframe</span><strong>6-12 weeks</strong></div><div><span>Success measure</span><strong>Reach, uptake and drop-off</strong></div><label><span>Owner</span><select aria-label="Assign owner for Test a small response"><option>Assign owner</option><option>Programme lead</option><option>Service design lead</option><option>Evaluation lead</option></select></label></div><div class="response-step-detail" hidden><div><span>We could test</span><p>Clearer information about no-cost, confidential entry points across one service pathway.</p></div><div><span>We would watch</span><p>First-contact completion, appropriate uptake and unintended access barriers.</p></div><div><span>Stop or adapt if</span><p>Access worsens, inequity increases or the change creates new confusion.</p></div><button type="button">Define small test</button></div></article>
+              <article class="response-step"><div class="response-step-row"><button type="button" data-response-step aria-expanded="false"><i>04</i><span><strong>Measure what changes</strong><small>Compare the test with its baseline and decide what comes next.</small></span><b>⌄</b></button><div><span>Timeframe</span><strong>8-16 weeks</strong></div><div><span>Success measure</span><strong>Evidence informs next step</strong></div><label><span>Owner</span><select aria-label="Assign owner for Measure what changes"><option>Assign owner</option><option>Evaluation lead</option><option>PHN analytics lead</option><option>Programme lead</option></select></label></div><div class="response-step-detail" hidden><div><span>We would compare</span><p>Signal movement, pathway uptake and service data against the pre-test baseline.</p></div><div><span>We would watch</span><p>Whether improvement is consistent across areas and sufficiently large cohorts.</p></div><div><span>Stop or adapt if</span><p>The response is not helping, cannot be evaluated or produces uneven effects.</p></div><button type="button">Create measurement note</button></div></article>
+            </section>
+            <footer class="response-causal-boundary"><strong>Not a causal claim.</strong><span>Every response is testable and reversible. Adapt or stop if it is not helping.</span></footer>
+          </article>
+        </section>
+        </section>
+      </div>
+
+      <section class="prospect-cta"><div><span>Tailored walkthrough</span><h3>See what this could reveal in your region.</h3><p>We can configure a private walkthrough around your population, service model and reporting needs, without exposing individual young people.</p></div><div class="prospect-actions"><button class="prospect-primary" type="button" id="walkthroughRequest">Request a tailored walkthrough</button><a class="linkedin-action" href="https://www.linkedin.com/in/prathesa/" target="_blank" rel="noopener">Message me on LinkedIn</a><button type="button" id="ctaPrivacy">See the privacy model</button></div></section>
+
+      <div class="professional-lab legacy-professional">
+        <div class="pro-topline"><span>STARBOUND / PROVIDER WORKSPACE</span><span>Fictional aggregate data</span></div>
+        <nav class="pro-tabs" aria-label="Provider workspace concepts">
+          <button type="button" class="active" data-pro-tab="brief" aria-selected="true"><span>1</span>Decision brief</button>
+          <button type="button" data-pro-tab="monitor" aria-selected="false"><span>2</span>Signal monitor</button>
+          <button type="button" data-pro-tab="board" aria-selected="false"><span>3</span>Planning board</button>
+        </nav>
+
+        <section class="pro-view active" data-pro-view="brief">
+          <header class="brief-header"><div><span class="pro-kicker">Decision brief · SB-047</span><h3>Cost pressure is changing how people seek care</h3><p>Requests for options that avoid another paid product, appointment or trip have remained elevated for nine weeks.</p></div><div class="brief-status"><span>Ready to explore</span><strong>86%</strong><small>validation confidence</small></div></header>
+          <div class="brief-grid">
+            <article class="pro-panel brief-trend"><header><b>What changed?</b><span>Last 12 weeks</span></header><svg viewBox="0 0 680 250" role="img" aria-label="Cost pressure trend increased over twelve weeks"><g class="pro-gridlines"><path d="M45 35H650M45 95H650M45 155H650M45 215H650"/></g><path class="pro-area" d="M45 194C90 175 120 181 165 190s72-40 115-26 70-42 112-23 70-28 112-8 87-37 146-78V220H45Z"/><path class="pro-line" d="M45 194C90 175 120 181 165 190s72-40 115-26 70-42 112-23 70-28 112-8 87-37 146-78"/><circle cx="650" cy="55" r="7"/><g class="pro-axis"><text x="42" y="242">W-12</text><text x="302" y="242">W-6</text><text x="612" y="242">Now</text></g></svg><div class="brief-delta"><strong>+11 pts</strong><span>compared with the previous 90 days</span></div></article>
+            <article class="pro-panel brief-where"><header><b>Where is it appearing?</b><span>Fictional areas</span></header><img src="signals/catchment-map-transparent.png" alt="Fictional grey catchment map with coloured determinant hubs"/><p><strong>4 service areas</strong> meet the minimum cohort and equity checks.</p></article>
+            <article class="pro-panel evidence-panel"><header><b>Why we trust this pattern</b></header><dl><div><dt>Privacy</dt><dd>842 contributions</dd></div><div><dt>Persistence</dt><dd>9 of 12 weeks</dd></div><div><dt>Corroboration</dt><dd>3 signal types</dd></div><div><dt>Equity review</dt><dd>4 areas checked</dd></div></dl></article>
+          </div>
+          <div class="brief-bottom"><article><span>What we can say</span><p>Cost repeatedly appears alongside requests for delayed, free or lower-friction care options.</p></article><article class="limit"><span>What we cannot say</span><p>That cost caused an outcome or that every person in this community experiences the same barrier.</p></article><article class="service-test"><span>A useful service test</span><p>Could the first contact offer one clearly identified no-cost pathway?</p><button type="button">Add to planning notes</button></article></div>
+        </section>
+
+        <section class="pro-view" data-pro-view="monitor" hidden>
+          <div class="monitor-toolbar"><div><span class="pro-kicker">Signal monitor</span><h3>Patterns requiring attention</h3></div><label>Sort by<select id="monitorSort"><option value="change">Largest change</option><option value="confidence">Confidence</option><option value="reach">Cohort reach</option></select></label></div>
+          <div class="monitor-layout"><article class="monitor-table-wrap"><table class="monitor-table"><thead><tr><th>Signal</th><th>12-week trend</th><th>Change</th><th>Confidence</th><th>Coverage</th><th>Status</th></tr></thead><tbody id="monitorRows"></tbody></table><p class="table-note">Only aggregate groups meeting the minimum threshold appear.</p></article><aside class="monitor-detail" id="monitorDetail" aria-live="polite"><span class="pro-kicker" id="monitorCode">SB-047</span><h3 id="monitorTitle">Cost pressure</h3><p id="monitorSummary">Requests for free, existing or lower-friction options are rising.</p><div class="monitor-metrics"><div><span>Change</span><strong id="monitorDelta">+11 pts</strong></div><div><span>Confidence</span><strong id="monitorScore">86%</strong></div></div><div class="monitor-boundary"><span>Interpret carefully</span><p id="monitorBoundary">This is an aggregate pattern, not a causal finding or person-level risk score.</p></div><button type="button" id="monitorExplore">Open decision brief</button></aside></div>
+        </section>
+
+        <section class="pro-view" data-pro-view="board" hidden>
+          <div class="board-header"><div><span class="pro-kicker">Community planning board</span><h3>Explore patterns by service area</h3><p>Select a coloured hub to see the planning context, not individual searches.</p></div><div class="board-key"><span><i></i>Meets threshold</span><span><i></i>Community review needed</span></div></div>
+          <div class="board-layout"><article class="board-map"><img src="signals/catchment-map-transparent.png" alt="Fictional grey map with six coloured determinant hubs"/><button class="map-node cost active" type="button" data-board-signal="cost" aria-label="Cost pressure"></button><button class="map-node access" type="button" data-board-signal="access" aria-label="Travel barriers"></button><button class="map-node care" type="button" data-board-signal="care" aria-label="Caring load"></button><button class="map-node energy" type="button" data-board-signal="energy" aria-label="Low capacity"></button><span class="fictional-label">Fictional service area</span></article><aside class="board-detail" aria-live="polite"><span class="pro-kicker" id="boardCode">Selected pattern · SB-047</span><h3 id="boardTitle">Cost pressure</h3><p id="boardSummary">Stronger in four overlapping service areas, with travel appearing alongside it.</p><dl><div><dt>Coverage</dt><dd id="boardCoverage">842 contributions</dd></div><div><dt>Persistence</dt><dd id="boardPersistence">9 of 12 weeks</dd></div><div><dt>Community check</dt><dd id="boardCommunity">Review scheduled</dd></div></dl><div class="board-question"><span>Planning question</span><p id="boardQuestion">Where could a no-cost route be made visible at first contact?</p></div></aside></div>
+        </section>
+      </div>
+
+      <div class="analytics-shell legacy-analytics">
+        <div class="analytics-topline"><span>STARBOUND / VALIDATION</span><span>SB-047 · FICTIONAL DATA</span></div>
+        <nav class="analytics-tabs" aria-label="Analytics views">
+          <button class="active" type="button" data-analytics-tab="overview" aria-selected="true">Overview</button>
+          <button type="button" data-analytics-tab="journey" aria-selected="false">Journey + drop-off</button>
+          <button type="button" data-analytics-tab="geography" aria-selected="false">Geography + segments</button>
+        </nav>
+
+        <div class="analytics-view active" data-analytics-view="overview">
+          <div class="kpi-grid" aria-label="Overview metrics">
+            <article><span class="kpi-glyph">◎</span><small>Contributions</small><strong id="analyticsContributions">842</strong><em>↑ 18% vs previous</em></article>
+            <article><span class="kpi-glyph violet">◉</span><small>Active signals</small><strong>48</strong><em>↑ 12% vs previous</em></article>
+            <article><span class="kpi-glyph blue">⌖</span><small>Service areas</small><strong>23</strong><em>↑ 2 areas</em></article>
+            <article><span class="kpi-glyph pink">◇</span><small>Confidence</small><strong>86%</strong><em>↑ 6 pts</em></article>
+          </div>
+          <div class="overview-grid">
+            <article class="analytics-card trend-card">
+              <header><div><b>Signal strength over time</b><small>Last 12 weeks</small></div><div class="mini-legend"><span class="current">This period</span><span class="previous">Previous period</span></div></header>
+              <svg class="trend-chart" viewBox="0 0 720 300" role="img" aria-label="Cost pressure signal strength rose across the last twelve weeks">
+                <g class="chart-grid"><path d="M55 35H690M55 95H690M55 155H690M55 215H690M55 270H690"/><path d="M55 25V270M180 25V270M305 25V270M430 25V270M555 25V270M690 25V270"/></g>
+                <path class="trend-area" d="M55 225C100 188 132 192 180 205S260 170 305 180s72-52 125-31 72-36 125-13 84-48 135-69V270H55Z"/>
+                <path class="trend-current" d="M55 225C100 188 132 192 180 205S260 170 305 180s72-52 125-31 72-36 125-13 84-48 135-69"/>
+                <path class="trend-previous" d="M55 180C110 154 135 166 180 142s75 17 125 12 74 26 125 2 75 18 125 4 82-32 135-42"/>
+                <g class="axis-labels"><text x="52" y="292">W-12</text><text x="294" y="292">W-8</text><text x="548" y="292">W-4</text><text x="650" y="292">This week</text></g>
+                <circle cx="690" cy="67" r="7"/><g class="trend-note"><rect x="570" y="28" width="92" height="40" rx="8"/><text x="584" y="46">+11 pts</text><text x="584" y="59">vs previous</text></g>
+              </svg>
+            </article>
+            <article class="analytics-card changing-card"><header><div><b>Signals changing now</b><small>Compared with previous period</small></div></header><div class="signal-list" id="signalList" role="list"></div></article>
+          </div>
+          <article class="validation-panel" aria-live="polite">
+            <div class="validation-topline"><span>SELECTED SIGNAL / VALIDATION</span><span id="validationCode">SB-047</span></div>
+            <div class="validation-detail-grid">
+              <div class="validation-story"><div class="validation-heading"><div><span class="status-orb" id="statusOrb"></span><p id="validationStatus">Ready to explore</p></div><strong id="validationScore">86%</strong></div><h3 id="validationTitle">Cost pressure is changing how people seek care</h3><p id="validationSummary">People are more often asking for options that avoid a new appointment, paid product or extra trip.</p></div>
+              <div class="validation-beam" id="validationBeam" aria-label="Validation checks"></div>
+            </div>
+            <div class="validation-boundaries"><div class="interpretation"><span>What we can say</span><p id="canSay">Cost is repeatedly appearing alongside delayed or lower-friction care preferences in this cohort.</p></div><div class="boundary"><span>What we cannot say</span><p id="cannotSay">That cost caused a particular health outcome, or that every person in this community has the same barrier.</p></div></div>
+            <button class="primary" id="exploreButton" type="button">Explore this signal <span>↗</span></button>
+          </article>
+        </div>
+
+        <div class="analytics-view" data-analytics-view="journey" hidden>
+          <div class="journey-analytics-grid">
+            <article class="analytics-card funnel-card"><header><div><b>Service journey</b><small>Overall · last 90 days</small></div><div class="segment-chips"><span>All signals</span><span>Cost</span><span>Travel</span><span>Care</span></div></header><div class="funnel-stages"><div style="--stage:100%;--tone:#56cbbb"><small>Search</small><i></i><strong>100%</strong><span>8,420 people</span></div><b>↓ 28%</b><div style="--stage:72%;--tone:#a887d4"><small>Answer</small><i></i><strong>72%</strong><span>6,050 people</span></div><b>↓ 31%</b><div style="--stage:49%;--tone:#dc78a9"><small>Next step</small><i></i><strong>41%</strong><span>3,450 people</span></div><b>↓ 18%</b><div style="--stage:34%;--tone:#6aa8dd"><small>Connected support</small><i></i><strong>23%</strong><span>1,930 people</span></div></div></article>
+            <aside class="analytics-card validation-rail"><b>Validation insight</b><dl><div><dt>Persistence</dt><dd>9 of 12 weeks</dd></div><div><dt>Corroboration</dt><dd>3 signal types</dd></div><div><dt>Equity check</dt><dd>4 areas reviewed</dd></div></dl></aside>
+          </div>
+          <article class="analytics-card journey-trend"><header><div><b>Journey trend</b><small>Stage retention · last 12 weeks</small></div></header><svg viewBox="0 0 900 240" role="img" aria-label="Journey stage retention trends"><g class="chart-grid"><path d="M50 35H860M50 85H860M50 135H860M50 185H860"/></g><path class="line teal" d="M50 48 120 52 190 45 260 50 330 42 400 48 470 39 540 45 610 40 680 47 750 38 860 42"/><path class="line violet" d="M50 88 120 82 190 92 260 86 330 96 400 90 470 101 540 96 610 106 680 100 750 111 860 104"/><path class="line pink" d="M50 133 120 128 190 140 260 135 330 143 400 139 470 151 540 146 610 157 680 152 750 164 860 158"/><path class="line blue" d="M50 176 120 171 190 181 260 177 330 185 400 180 470 190 540 187 610 197 680 191 750 201 860 196"/></svg></article>
+          <div class="compact-boundaries"><div class="interpretation"><span>What we can say</span><p>Friction is concentrated between receiving an answer and completing a next step.</p></div><div class="boundary"><span>What we cannot say</span><p>That one barrier caused every drop-off or that all people follow the same pathway.</p></div></div>
+        </div>
+
+        <div class="analytics-view" data-analytics-view="geography" hidden>
+          <div class="geo-grid">
+            <article class="analytics-card geo-map-card"><header><div><b>Catchment overview</b><small>Signal strength by determinant · fictional areas</small></div><div class="map-toggle"><span>Map</span><span>List</span></div></header><img src="signals/catchment-map-transparent.png" alt="Fictional grey catchment map with coloured determinant hubs" /></article>
+            <aside class="analytics-card geo-legend"><b>Signals</b><ul><li><i class="teal-dot"></i>Cost pressure</li><li><i class="violet-dot"></i>Caring load</li><li><i class="pink-dot"></i>Low capacity</li><li><i class="blue-dot"></i>Travel barriers</li><li><i class="sage-dot"></i>Environment</li></ul><div class="intensity"><span>Map intensity</span><i></i><small>Low <b>High</b></small></div></aside>
+          </div>
+          <div class="geo-lower-grid"><article class="analytics-card segment-table"><header><div><b>Segment summary</b><small>Compared with previous period</small></div></header><table><thead><tr><th>Signal</th><th>Trend</th><th>Change</th></tr></thead><tbody><tr><td>Cost pressure</td><td>⌁⌁⌁</td><td>↑ 11 pts</td></tr><tr><td>Caring load</td><td>⌁⌁</td><td>↑ 7 pts</td></tr><tr><td>Low capacity</td><td>⌁⌁⌁</td><td>↑ 4 pts</td></tr><tr><td>Travel barriers</td><td>⌁⌁</td><td>↑ 2 pts</td></tr></tbody></table></article><article class="analytics-card bubble-card"><header><div><b>Signal mix</b><small>Share of aggregate activity</small></div></header><div class="bubble-mix"><i class="b1">36%</i><i class="b2">24%</i><i class="b3">18%</i><i class="b4">14%</i><i class="b5">8%</i></div></article><aside class="analytics-card geo-validation"><b>Interpretation</b><dl><div><dt>Persistence</dt><dd>9 of 12 weeks</dd></div><div><dt>Corroboration</dt><dd>3 signal types</dd></div><div><dt>Equity check</dt><dd>4 areas reviewed</dd></div></dl></aside></div>
+          <div class="compact-boundaries"><div class="interpretation"><span>What we can say</span><p>Cost and travel signals are stronger in several overlapping service areas.</p></div><div class="boundary"><span>What we cannot say</span><p>That map intensity represents individual risk or a causal relationship.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="action-view" id="actionView" aria-labelledby="actionTitle">
+      <header class="section-head">
+        <div><p class="eyebrow">From signal to service question</p><h2 id="actionTitle">Make the pattern discussable.</h2></div>
+        <button class="text-button" id="closeAction" type="button">Close detail</button>
+      </header>
+      <div class="action-grid">
+        <article class="context-map">
+          <div class="map-head"><span>Co-occurring context</span><small>Not a causal model</small></div>
+          <div class="orbit-map" id="orbitMap"></div>
+        </article>
+        <article class="question-card">
+          <span class="card-label">A useful planning question</span>
+          <blockquote id="planningQuestion">“Where could we remove a cost, travel or appointment step from the first contact?”</blockquote>
+          <div class="response-options" id="responseOptions"></div>
+          <button class="secondary" id="noteButton" type="button">Add to planning notes</button>
+          <p class="note-status" id="noteStatus" role="status"></p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="demo-toast" id="demoToast" role="status" aria-live="polite"></div>
+
+  <dialog id="privacyDialog">
+    <button class="dialog-close" id="privacyClose" aria-label="Close">×</button>
+    <p class="eyebrow">Privacy boundary</p>
+    <h2>Designed to reveal patterns,<br />not people.</h2>
+    <p>This prototype shows fictional, aggregated signals. A production version would require explicit consent, minimum cohort sizes, suppression, access controls, audit logs and community governance before any real data is displayed.</p>
+    <ul><li>No names or individual timelines</li><li>No drill-down to a single person</li><li>No inferred diagnosis or risk score</li></ul>
+  </dialog>
+
+  <dialog id="walkthroughDialog" class="contact-dialog">
+    <button class="dialog-close" id="walkthroughClose" aria-label="Close">×</button>
+    <p class="eyebrow">Tailored walkthrough</p>
+    <h2>Tell me what you want to explore.</h2>
+    <p>Send a short note and it will go directly to the Starbound inbox. No email app should open.</p>
+    <form id="walkthroughForm" action="https://formsubmit.co/starbound.enterprise@gmail.com" method="POST" target="walkthroughSink">
+      <input type="hidden" name="_subject" value="Starbound tailored walkthrough request" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
+      <label>Name<input name="name" autocomplete="name" required /></label>
+      <label>Email<input name="email" type="email" autocomplete="email" required /></label>
+      <label>Organisation<input name="organisation" autocomplete="organization" /></label>
+      <label>Message<textarea name="message" rows="5" required placeholder="Tell me about your region, population or reporting needs."></textarea></label>
+      <div class="contact-actions"><button class="primary" type="submit">Send message <span>→</span></button><a href="https://www.linkedin.com/in/prathesa/" target="_blank" rel="noopener">Message me on LinkedIn</a></div>
+      <p class="contact-status" id="walkthroughStatus" role="status"></p>
+    </form>
+    <iframe class="form-sink" name="walkthroughSink" title="Message submission"></iframe>
+  </dialog>
+
+  <footer class="demo-footer"><span>Starbound provider prototype · v0.1</span><span>Fictional data · Not clinical decision support</span></footer>
+  <script src="provider.js"></script>
+  <script src="professional.js"></script>
+  <script src="population.js"></script>
+  <script src="explainer.js"></script>
+</body>
+</html>

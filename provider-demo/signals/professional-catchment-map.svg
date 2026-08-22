@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrative hex-grid population complexity map</title>
+  <desc id="desc">A fictional service catchment represented by equal-sized hexagonal areas, coloured from stable through survival. Five outlined cells indicate meaningful quarterly movement.</desc>
+  <defs>
+    <path id="catchment" d="M88 191 124 128 205 105 263 58 350 76 414 53 496 87 582 82 646 134 682 218 650 278 690 344 653 424 575 453 519 505 428 485 351 520 284 478 202 490 142 438 73 405 91 329 47 269Z"/>
+    <clipPath id="catchmentClip"><use href="#catchment"/></clipPath>
+    <pattern id="hexGrid" width="40" height="69.28" patternUnits="userSpaceOnUse">
+      <path d="M20 1 39 12v22L20 45 1 34V12Z M20 46 39 57v22L20 90 1 79V57Z M60 1 79 12v22L60 45 41 34V12Z" fill="none" stroke="#fffdf8" stroke-width="3"/>
+      <path d="M20 1 39 12v22L20 45 1 34V12Z M20 46 39 57v22L20 90 1 79V57Z M60 1 79 12v22L60 45 41 34V12Z" fill="none" stroke="#52606b" stroke-opacity=".42" stroke-width=".8"/>
+    </pattern>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="9" stdDeviation="9" flood-color="#17132b" flood-opacity=".13"/></filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <g clip-path="url(#catchmentClip)">
+      <rect width="760" height="560" fill="#69c8bb"/>
+      <path d="M208 69c81 9 102 58 168 54 66-4 98-56 169-23 55 26 80 79 64 130-22 67-94 56-145 78-56 25-65 92-128 99-53 6-81-39-135-50-48-10-92 23-131-2V203c54-6 79-32 89-70 8-30 15-53 49-64Z" fill="#a9cf82"/>
+      <path d="M326 66c53 13 77 68 127 71 55 4 95-35 145 1 44 31 64 72 51 119-16 57-73 48-116 68-51 23-52 72-100 86-44 13-77-15-102-48-29-38-65-65-58-119 7-55 45-86 53-178Z" fill="#e8bd55"/>
+      <path d="M521 95c76-3 139 56 157 126 15 58-31 83-17 129 12 39-3 77-49 94-51 19-87-10-101-54-15-46 19-79 12-126-7-49-40-85-2-169Z" fill="#de765d"/>
+      <path d="M260 365c40-35 86-16 112 21 23 33 16 82-21 120l-67-28-82 12-55-49c23-29 76-43 113-76Z" fill="#e8bd55"/>
+      <rect width="760" height="560" fill="url(#hexGrid)"/>
+    </g>
+    <use href="#catchment" fill="none" stroke="#303342" stroke-width="3" stroke-linejoin="round"/>
+  </g>
+
+  <g fill="none" stroke="#17053d" stroke-width="4" stroke-linejoin="round">
+    <path d="M220 116 239 127v22l-19 11-19-11v-22Z"/>
+    <path d="M460 186 479 197v22l-19 11-19-11v-22Z"/>
+    <path d="M580 324 599 335v22l-19 11-19-11v-22Z"/>
+    <path d="M340 393 359 404v22l-19 11-19-11v-22Z"/>
+    <path d="M620 185 639 196v22l-19 11-19-11v-22Z"/>
+  </g>
+  <g font-family="Space Mono,monospace" font-size="12" font-weight="700" fill="#4f4a57">
+    <text x="67" y="530">EQUAL-AREA VIEW</text>
+    <text x="590" y="530">5 AREAS SHIFTING</text>
+  </g>
+</svg>

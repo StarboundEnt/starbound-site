@@ -225,12 +225,22 @@ let selectedChances = [];
 let currentProfile = '';
 
 function goToStep(stepNumber) {
+  // 1) hide all steps
   const allSteps = document.querySelectorAll('[id^="step"]');
   allSteps.forEach(step => step.classList.add('hidden'));
 
+  // 2) show the target
   const target = document.getElementById(`step${stepNumber}`);
-  if (target) target.classList.remove('hidden');
+  if (!target) return;
+  target.classList.remove('hidden');
+
+  // 3) scroll it into view
+  target.scrollIntoView({
+    behavior: 'smooth',  // smooth animation
+    block: 'start'       // align the top of the section with the top of the viewport
+  });
 }
+
 
 
 function renderOptions() {
@@ -457,8 +467,22 @@ function checkContradictions(type) {
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
+function typeTagline() {
+  const el = document.getElementById('introTaglineText');
+  if (!el) return;
+  const text = el.textContent;
+  el.textContent = '';
+  let i = 0;
+  const interval = setInterval(() => {
+    el.textContent += text.charAt(i);
+    i++;
+    if (i >= text.length) clearInterval(interval);
+  }, 40);
+}
+document.addEventListener('DOMContentLoaded', () => {
   renderOptions();
+  typeTagline();
+  goToStep(0);      // <-- this will un-hide step0 on load
 });
 
 

@@ -1,103 +1,183 @@
+<!doctype html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1f0150" />
+  <meta name="description" content="Explore how social conditions and current behaviours can change what health and wellbeing support is practical for a person." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Starbound — Context changes care" />
+  <meta property="og:description" content="Build a fictional complexity profile and compare generic guidance with context-aware support." />
+  <meta property="og:image" content="starbound-blueprint-phone-v2.png" />
+  <meta property="og:image:alt" content="Starbound blueprint showing context flowing through a knowledge graph toward clear next steps." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Starbound — Context changes care</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="complexity.css" />
+  <link rel="stylesheet" href="pet.css" />
+  <link rel="stylesheet" href="blueprint-live.css" />
+  <link rel="stylesheet" href="polish.css" />
+  <link rel="stylesheet" href="../demo-brand.css" />
 </head>
 <body>
-  <!-- replace everything in <body> with the snippet below -->
-  <div id="introScreen">
-    <h1>What’s your health Complexity Profile?</h1>
-    <h2>Health isn’t just about what you do — it’s shaped by what you’re up against.</h2>
+  <div class="blueprint-parallax" aria-hidden="true">
+    <span class="parallax-grid parallax-grid-fine"></span>
+    <span class="parallax-grid parallax-grid-major"></span>
+    <span class="parallax-mark parallax-mark-a"></span>
+    <span class="parallax-mark parallax-mark-b"></span>
+  </div>
+  <a class="skip-link" href="#demo">Skip to demo</a>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="Starbound home">
+      <img class="brand-logo" src="../logo.png" alt="" />
+      <span>starbound</span>
+    </a>
+    <div class="demo-label">Interactive prototype</div>
+    <a class="demo-switch" href="../provider-demo/">Open provider demo</a>
+  </header>
 
+  <aside class="safety-strip" aria-label="Urgent help and crisis support">
+    <strong>This demo is not medical advice.</strong>
+    <span>Immediate danger: <a href="tel:000">call 000</a></span>
+    <span>Crisis support: <a href="tel:131114">Lifeline 13 11 14</a></span>
+    <span>Ages 5–25: <a href="tel:1800551800">Kids Helpline 1800 55 1800</a></span>
+  </aside>
 
-<div class="glitch-container">
-  <div class="input-row">
-    <div class="input-label">
-      <div class="glitch-word choices-glitch">Choices</div>
-      <div class="arrow">↓</div>
+  <main id="demo">
+    <section class="blueprint-overview" aria-labelledby="blueprint-title">
+      <div class="blueprint-heading">
+        <h2 id="blueprint-title">How context becomes a different answer.</h2>
+      </div>
+      <figure class="blueprint-frame">
+        <div class="blueprint-live-stage">
+          <img src="starbound-blueprint-phone-v3-transparent.png" alt="Static blueprint defining chances as conditions that shape your options and choices as actions available to you, flowing into a person and then a phone with clear next steps below." />
+          <svg class="phone-knowledge-graph" viewBox="0 0 180 270" role="img" aria-labelledby="phone-graph-title phone-graph-description">
+            <title id="phone-graph-title">Animated knowledge graph inside the Starbound phone</title>
+            <desc id="phone-graph-description">A central person node connects to changing context nodes for cost, housing, caring, sleep, and energy.</desc>
+            <defs>
+              <filter id="phone-chalk-wobble" x="-12%" y="-12%" width="124%" height="124%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="8" result="chalkNoise" />
+                <feDisplacementMap in="SourceGraphic" in2="chalkNoise" scale="1.25" xChannelSelector="R" yChannelSelector="G" />
+              </filter>
+            </defs>
+            <g class="phone-graph-cluster" transform="translate(0 9)">
+              <g class="phone-graph-links" aria-hidden="true">
+                <path class="phone-context-links" d="M51.4 92.4C60 99 69 108 77.25 120.92M128.6 92.4C120 99 111 108 102.75 120.92M47.55 164.09C58 159 67 153 74.33 145.73M132.45 164.09C122 159 113 153 105.67 145.73"/>
+                <path class="phone-orbit-line" d="M52 72Q90 48 128 72M47 180Q90 204 133 180"/>
+              </g>
+              <g class="phone-data-pulses" aria-hidden="true">
+                <circle r="2.2"><animate attributeName="opacity" values="0;.82;.82;0" keyTimes="0;.18;.8;1" dur="5.6s" begin="-1.1s" repeatCount="indefinite"/><animateMotion dur="5.6s" begin="-1.1s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".42 0 .58 1" path="M51.4 92.4C60 99 69 108 77.25 120.92"/></circle>
+                <circle r="2.2"><animate attributeName="opacity" values="0;.82;.82;0" keyTimes="0;.18;.8;1" dur="6.2s" begin="-4.5s" repeatCount="indefinite"/><animateMotion dur="6.2s" begin="-4.5s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".42 0 .58 1" path="M128.6 92.4C120 99 111 108 102.75 120.92"/></circle>
+                <circle r="2.2"><animate attributeName="opacity" values="0;.82;.82;0" keyTimes="0;.18;.8;1" dur="5.9s" begin="-3s" repeatCount="indefinite"/><animateMotion dur="5.9s" begin="-3s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".42 0 .58 1" path="M47.55 164.09C58 159 67 153 74.33 145.73"/></circle>
+                <circle r="2.2"><animate attributeName="opacity" values="0;.82;.82;0" keyTimes="0;.18;.8;1" dur="6.6s" begin="-5.4s" repeatCount="indefinite"/><animateMotion dur="6.6s" begin="-5.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".42 0 .58 1" path="M132.45 164.09C122 159 113 153 105.67 145.73"/></circle>
+              </g>
+              <g class="phone-node pn1" transform="translate(42 82)"><circle r="14"/><g class="phone-node-symbol"><circle r="5"/><path d="M2.5-3.2C1.7-4-2-4.2-2.8-2.4-4 0 3.3-.2 2.8 2.4 2.4 4.3-1.4 4.4-3 3M0-6v12"/></g></g>
+              <g class="phone-node pn2" transform="translate(138 82)"><circle r="14"/><g class="phone-node-symbol"><path d="m-7 0 7-6 7 6M-5-1v7H5v-7M-1 6V2h2v4"/></g></g>
+              <g class="phone-node pn3" transform="translate(36 172)"><circle r="14"/><g class="phone-node-symbol"><circle cx="-3.5" cy="-3.5" r="2.2"/><circle cx="3.5" cy="-3" r="2.2"/><path d="M-8 6c.4-4 1.8-6 4.5-6S.6 2 1 6M0 6c.5-3.4 1.7-5.1 3.8-5.1S7.5 2.6 8 6"/></g></g>
+              <g class="phone-node pn4" transform="translate(144 172)"><circle r="14"/><g class="phone-node-symbol"><path d="M5 4.5A7 7 0 0 1-3-6 7 7 0 1 0 5 4.5Z"/></g></g>
+              <g class="phone-node core-phone-node" transform="translate(90 135)"><circle class="core-ring" r="31"/><circle r="19"/><text y="3">YOU</text></g>
+            </g>
+          </svg>
+        </div>
+        <figcaption>The profile changes what support is practical. It does not diagnose the person or claim what caused their concern.</figcaption>
+      </figure>
+    </section>
+
+    <section class="builder" id="builder" aria-labelledby="builder-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">1 · Shape the context</p><h2 id="builder-title">What is this person navigating?</h2></div>
+        <button class="text-button" id="resetButton">Reset selections</button>
+      </div>
+
+      <div class="builder-grid">
+        <div class="selection-panel">
+          <fieldset>
+            <legend><span><strong>Social determinants</strong><small>Conditions that shape their choices</small></span></legend>
+            <div class="option-grid" id="determinantOptions"></div>
+          </fieldset>
+          <fieldset>
+            <legend><span><strong>Current behaviours</strong><small>What is happening right now</small></span></legend>
+            <div class="option-grid" id="behaviourOptions"></div>
+          </fieldset>
+        </div>
+
+        <aside class="profile-card" aria-live="polite">
+          <p class="profile-kicker">Current capacity profile</p>
+          <div class="profile-title-row"><h3 id="profileName">Stable</h3></div>
+          <p class="profile-description" id="profileDescription"></p>
+          <div class="capacity-scale">
+            <div class="scale-labels"><span>More capacity</span><span>Less capacity</span></div>
+            <div class="scale-track"><div class="scale-fill" id="scaleFill"></div><span class="scale-marker" id="scaleMarker"></span></div>
+          </div>
+          <div class="profile-context"><span id="signalCount">0 signals selected</span><span id="profileFocus">Room to build</span></div>
+          <div class="active-signals" id="activeSignals"><span class="empty-signal">Select context to see the profile respond</span></div>
+          <p class="profile-caveat">A support setting, not a label. It changes the pace, tone and practicality of guidance.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="question-lab" aria-labelledby="lab-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">2 · Ask one question</p><h2 id="lab-title">Watch the answer adapt.</h2></div>
+      </div>
+
+      <div class="question-tabs" id="questionTabs" role="tablist" aria-label="Example questions"></div>
+      <label class="custom-question-label" for="customQuestion">Or ask any health or wellbeing question</label>
+      <div class="question-input-row">
+        <input id="customQuestion" maxlength="180" placeholder="e.g. How can I fit this around caring for my mum?" />
+        <button class="primary-button" id="askButton">Show the difference</button>
+      </div>
+      <p class="ai-status" id="aiStatus" role="status" aria-live="polite"></p>
+
+      <div class="answer-comparison" id="answerComparison">
+        <article class="answer-card generic-answer">
+          <div class="answer-heading"><span>Without context</span><small>Generic guidance</small></div>
+          <h3 id="genericTitle"></h3>
+          <p id="genericIntro"></p>
+          <ol id="genericSteps"></ol>
+          <div class="answer-footer">One-size-fits-most</div>
+        </article>
+        <article class="answer-card adapted-answer">
+          <div class="answer-heading"><span>With their context</span><small id="adaptedProfileLabel">Stable</small></div>
+          <h3 id="adaptedTitle"></h3>
+          <p id="adaptedIntro"></p>
+          <ol id="adaptedSteps"></ol>
+          <div class="context-explanation" id="contextExplanationWrap" hidden>
+            <strong>What may be shaping this</strong>
+            <p id="contextExplanation"></p>
+          </div>
+          <div class="why-row"><strong>Why this changed</strong><div id="whyChips"></div></div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <aside class="site-pet" id="sitePet" aria-label="Starbound alien companion">
+    <div class="pet-message" id="petMessage" role="status" aria-live="polite">
+      <button class="pet-message-close" id="petMessageClose" type="button" aria-label="Close alien message">×</button>
+      <span class="pet-message-label">VISITOR SIGNAL</span>
+      <p id="petMessageText">Pick a few things this person is navigating. I’ll keep watch as their profile changes.</p>
     </div>
+    <button class="pet-toggle" id="petToggle" type="button" aria-expanded="true" aria-controls="petMessage" aria-label="Close alien companion message">
+      <span class="pet-orbit" aria-hidden="true"></span>
+      <img id="petImage" src="aliens/helmet-peeker-teal.png" alt="" />
+      <span class="pet-signal-dot" aria-hidden="true"></span>
+    </button>
+  </aside>
 
-    <div class="input-label">
-      <div class="glitch-word chances-glitch">Chances</div>
-      <div class="arrow">↓</div>
-    </div>
-  </div>
-
-  <div class="glitch-word profile-glitch">Your complexity profile</div>
-</div>
-    
-    <p>This tool helps you understand your current health context, no judgement, no pressure.</p>
-    <ul>
-      <li>Answer a few quick questions about your habits and environment</li>
-      <li>Get a snapshot of your health complexity profile</li>
-      <li>See how Starbound would support you</li>
-      <li>You don’t need to share your name or any sensitive info.</li>
-    </ul>
-    <p class="intro-disclaimer">
-    <strong>Disclaimer:</strong> This is a demo version of Starbound’s complexity profile tool. Your answers are not saved, tracked, or linked to your identity. This tool does not use AI or make any personalised predictions. It’s a simplified snapshot — it doesn’t analyse behaviour patterns or contextual trends like the real app will. You can skip any question. Nothing here is medical advice.
-    </p>
-    <button id="startBtn">Start</button>
-  </div>
-
-
-<div id="questionContainer" class="hidden">
-  <div id="questionContent"></div>
-  <div class="controls">
-    <button id="backBtn"    class="back-btn">← Back</button>
-    <button id="restartBtn" class="restart-btn">Start Over</button>
-  </div>
-</div>
-  <div id="resultContainer" class="hidden"></div>
-
+  <footer class="demo-footer">
+    <span>Starbound public prototype · v0.3.0</span>
+    <span><a href="ACCESSIBILITY.md">Accessibility statement</a> · For demonstration only · Not medical advice</span>
+  </footer>
+  <script>
+    window.STARBOUND_AI_ENDPOINT = window.STARBOUND_AI_ENDPOINT ||
+      (['localhost', '127.0.0.1'].includes(window.location.hostname)
+        ? 'http://127.0.0.1:8001/api/v1/demo-answer'
+        : `${window.location.origin}/api/v1/demo-answer`);
+  </script>
   <script src="complexity.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    // Reset positions first
-    gsap.set(".choices", { x: -100, opacity: 0 });
-    gsap.set(".chances", { x: 100, opacity: 0 });
-    gsap.set(".result", { scale: 0, opacity: 0 });
-
-    // Animate Choices from left
-    gsap.to(".choices", {
-      x: 0,
-      opacity: 1,
-      duration: 1,
-      ease: "power3.out",
-      delay: 0.2
-    });
-
-    // Animate Chances from right
-    gsap.to(".chances", {
-      x: 0,
-      opacity: 1,
-      duration: 1,
-      ease: "power3.out",
-      delay: 0.4
-    });
-
-    // Animate Result popping in with bounce
-    gsap.to(".result", {
-      scale: 1,
-      opacity: 1,
-      duration: 1,
-      ease: "elastic.out(1, 0.5)",
-      delay: 1
-    });
-
-    // Optional: pulse the profile icon gently forever
-    gsap.to(".result", {
-      scale: 1.05,
-      repeat: -1,
-      yoyo: true,
-      duration: 1.5,
-      ease: "sine.inOut",
-      delay: 2
-    });
-  });
-</script>
-
-
-
 </body>
+</html>

@@ -1,0 +1,102 @@
+.core-phone-node .core-ring {
+  animation: core-pulse 2.4s ease-in-out infinite;
+  transform: none;
+}
+
+/* Hand-drawn treatment for the live graph inside the illustrated phone. */
+.phone-graph-links path,
+.phone-node circle,
+.phone-node rect {
+  filter: url(#phone-chalk-wobble);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.phone-node text {
+  font-family: "Comic Sans MS", "Bradley Hand", cursive;
+  font-weight: 600;
+  letter-spacing: .02em;
+}
+
+.phone-graph-links path {
+  stroke: #f5e6ca;
+  stroke-width: 1.5;
+  stroke-dasharray: 4 6;
+  opacity: .86;
+}
+
+.phone-graph-links .phone-orbit-line {
+  stroke: #f5e6ca;
+  opacity: .48;
+}
+
+.phone-node circle,
+.phone-node rect {
+  fill: rgba(17, 16, 75, .28);
+  stroke: #f5e6ca;
+  stroke-width: 1.65;
+  stroke-dasharray: 2.2 1.15;
+}
+
+.phone-node text {
+  fill: #f5e6ca;
+  font-size: 7px;
+}
+
+.pn1 circle { stroke: #f5e6ca; }
+.pn2 circle { stroke: #f5e6ca; }
+.pn3 circle { stroke: #f5e6ca; }
+.pn4 circle { stroke: #f5e6ca; }
+.pn1 text { fill: #9b5de5; }
+.pn2 text { fill: #00d7c4; }
+.pn3 text { fill: #ff7a35; }
+.pn4 text { fill: #ff4da6; }
+
+.phone-node-symbol {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.35;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: url(#phone-chalk-wobble);
+}
+
+.phone-node-symbol circle {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.35;
+  stroke-dasharray: none;
+}
+
+.phone-data-pulses circle {
+  fill: #00d7c4;
+  filter: none;
+  opacity: .8;
+}
+
+.core-phone-node .core-ring {
+  fill: none;
+  stroke: #00d7c4;
+  stroke-width: 1.65;
+  stroke-dasharray: 3 5;
+}
+
+.core-phone-node > circle:nth-of-type(2) {
+  fill: rgba(17, 16, 75, .35);
+  stroke: #f5e6ca;
+}
+
+@keyframes phone-chalk-pulse {
+  0%, 100% { opacity: .72; }
+  50% { opacity: 1; }
+}
+
+.phone-node {
+  animation-name: phone-chalk-pulse;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .core-phone-node .core-ring {
+    animation: none;
+  }
+}

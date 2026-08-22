@@ -7,31 +7,36 @@
   <link rel="stylesheet" href="preview-style.css" />
 </head>
 <body>
-  <main class="container">
+ <main class="container">
 
-
-  <section id="Step0">
-  <h1>Starbound Simulator</h1>
-<p class="section-description" style="margin-bottom: 1rem;">
-  <em>This is just a demo — not a diagnostic tool or medical advice. It gives a sneak peek into how Starbound personalises support based on your daily habits and circumstances. </em>
+<section id="step0" class="step0-wrapper">
+    <div class="logo-wrapper">
+  <img src="logo.png" alt="Starbound Logo" class="logo" />
+</div>
+    <h1>Starbound Simulator</h1>
+    <p class="section-description intro-tagline" style="margin-bottom: 1rem;">
+      <strong>This demo shows how Starbound adapts to real-life complexity.</strong>
+    </p>
+    <div class="card demo-instructions" style="margin-bottom: 2rem;">
+      <ul class="demo-steps">
+        <li><strong>Pick <span class="highlight">2 choices</span></strong> (your habits)</li>
+        <li><strong>Pick <span class="highlight">2 chances</span></strong> (your context)</li>
+        <li><strong>Hit <span class="highlightorange">"Generate Profile"</span></strong> to unlock your custom preview</li>
+        <li>
+          Then see how Starbound adapts:
+          <ul class="sub-steps">
+            <li>🌤️ Health Forecast</li>
+            <li>🔍 Ask Starbound</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+<p class="disclaimer-text">
+  <em>This is just a demo — not a diagnostic tool or medical advice. It gives a sneak peek into how Starbound personalises support based on your daily habits and circumstances.</em>
 </p>
 
-<div class="card demo-instructions" style="margin-bottom: 2rem;">
-  <h3><strong>Try it out:</strong></h3>
-  <ul class="demo-steps">
-    <li><strong>Pick <span class="highlight">2 choices</strong> (your habits)</li>
-    <li><strong>Pick <span class="highlight">2 chances</strong> (your context)</li>
-    <li><strong>Hit <span class="highlightorange">"Generate Profile"</strong> to unlock your custom preview</li>
-      <li>Then see how Starbound adapts:</li>
-      <ul class="sub-steps">
-        <li>🌤️ Health Forecast</li>
-        <li>🔍 Ask Starbound</li>
-      </ul>
-    </li>
-  </ul>
-</div>
-<button onclick="goToStep(1)">Get Started</button>
-</section>
+    <button onclick="goToStep(1)" aria-label="Start the demo">Get Started</button>
+  </section>
 
 
 <section id="step1" class="hidden">
