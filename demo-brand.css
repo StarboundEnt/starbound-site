@@ -108,7 +108,6 @@ h4 {
 }
 
 .demo-label span,
-.demo-switch,
 .privacy-pulse,
 .live-dot {
   display: inline-block;
@@ -296,6 +295,17 @@ footer {
   .demo-switch {
     padding: .55rem .75rem;
     font-size: .64rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header,
+  .topbar {
+    padding-inline: 12px;
+  }
+
+  .brand span {
+    display: none;
   }
 }
 
