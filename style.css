@@ -177,6 +177,128 @@ main { width: min(1240px, calc(100% - 48px)); margin: 0 auto; }
 .demo-button.primary { background: var(--cream); color: var(--space); }
 .demo-button.primary:hover { background: var(--aqua); border-color: var(--aqua); box-shadow: 0 0 24px rgba(0, 245, 212, .3); }
 
+.note-section {
+  display: grid;
+  justify-items: start;
+  gap: 2.4rem;
+  padding: 7rem 0 8rem;
+  border-top: 1px solid var(--line);
+  text-align: left;
+}
+
+.note-section h2 {
+  max-width: none;
+  margin: 0;
+  font: 600 clamp(2.5rem, 4.8vw, 4.2rem)/1.04 "Lexend", sans-serif;
+  letter-spacing: -.045em;
+}
+
+.note-section__intro {
+  max-width: 680px;
+  margin: -1rem 0 .4rem;
+  color: rgba(245, 230, 202, .76);
+  font-size: clamp(1rem, 1.45vw, 1.18rem);
+  line-height: 1.6;
+}
+
+@media (min-width: 1100px) {
+  .note-section h2 { white-space: nowrap; }
+}
+
+.note-envelope {
+  position: relative;
+  width: min(390px, calc(100vw - 50px));
+  height: 245px;
+  color: #35105f;
+  text-decoration: none;
+  filter: drop-shadow(0 22px 28px rgba(8, 2, 30, .3));
+  transform: rotate(-1.2deg);
+  transition: transform .38s cubic-bezier(.2, .8, .2, 1), filter .3s ease;
+  perspective: 900px;
+}
+
+.note-envelope::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 34px 0 0;
+  border: 2px solid #35105f;
+  border-radius: 8px 12px 7px 11px;
+  background: #f5e6ca;
+  box-shadow: inset 0 0 0 7px rgba(53, 16, 95, .06);
+}
+
+.note-envelope__front,
+.note-envelope__flap {
+  position: absolute;
+  inset: 34px 0 0;
+  border: 2px solid #35105f;
+  border-radius: 8px 12px 7px 11px;
+  background: #f5e6ca;
+}
+
+.note-envelope__flap {
+  z-index: 3;
+  height: 126px;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: top center;
+  backface-visibility: hidden;
+  transition: transform .42s cubic-bezier(.2, .75, .2, 1), z-index 0s linear .18s;
+}
+
+.note-envelope__front {
+  z-index: 4;
+  clip-path: polygon(0 36%, 50% 75%, 100% 36%, 100% 100%, 0 100%);
+  background: #f0ddbb;
+}
+
+.note-envelope__front::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(53, 16, 95, .27);
+  border-radius: 10px 7px 12px 8px;
+}
+
+.note-envelope__letter {
+  position: absolute;
+  z-index: 2;
+  left: 28px;
+  right: 28px;
+  top: 48px;
+  min-height: 155px;
+  display: grid;
+  align-content: center;
+  gap: .45rem;
+  padding: 1.4rem;
+  border: 1px solid rgba(53, 16, 95, .32);
+  border-radius: 5px 8px 4px 7px;
+  background: #fff2d8;
+  box-shadow: 3px 4px 0 rgba(53, 16, 95, .14);
+  transition: transform .45s cubic-bezier(.2, .8, .2, 1);
+}
+
+.note-envelope__letter strong { font: 700 1.15rem "Lexend", sans-serif; }
+.note-envelope__letter em { font: 500 .9rem "Space Mono", monospace; }
+
+.note-envelope:hover,
+.note-envelope:focus-visible {
+  transform: rotate(.4deg) scale(1.045);
+  filter: drop-shadow(0 28px 34px rgba(8, 2, 30, .38));
+}
+
+.note-envelope:hover .note-envelope__flap,
+.note-envelope:focus-visible .note-envelope__flap {
+  z-index: 1;
+  transform: translateY(3px) rotateX(178deg);
+  transition-delay: 0s;
+}
+
+.note-envelope:hover .note-envelope__letter,
+.note-envelope:focus-visible .note-envelope__letter { transform: translateY(-54px) rotate(.5deg); }
+
+.note-envelope:focus-visible { outline: 3px solid var(--aqua); outline-offset: 10px; }
+
 .contact-section {
   padding: 0 0 6rem;
 }
@@ -290,6 +412,8 @@ a:focus-visible { outline: 3px solid var(--aqua); outline-offset: 4px; }
   .demo-card { min-height: 560px; border-radius: 22px; }
   .card-visual { height: 230px; }
   .card-copy { padding: 1.5rem; }
+  .note-section { padding: 5rem 0 6rem; gap: 1.8rem; }
+  .note-envelope { height: 220px; }
   .contact-section { padding-bottom: 5rem; }
   .contact-card { padding: 1.35rem 1rem 1.6rem; border-radius: 14px; }
   .contact-card h2 { font-size: clamp(1.6rem, 6.8vw, 2.15rem); white-space: normal; }

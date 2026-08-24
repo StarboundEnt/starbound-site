@@ -3,6 +3,7 @@
   --contact-space: #1f0150;
   --contact-purple: #9b5de5;
   --contact-orange: #ff6b35;
+  --contact-ink: #35105f;
   position: fixed;
   left: clamp(16px, 3vw, 34px);
   bottom: clamp(16px, 3vw, 30px);
@@ -10,27 +11,6 @@
   width: 68px;
   height: 68px;
   font-family: "Inter", sans-serif;
-}
-
-.contact-orbit::before {
-  content: "";
-  position: absolute;
-  left: 28px;
-  bottom: 28px;
-  width: 112px;
-  height: 112px;
-  border: 2px dashed rgba(245, 230, 202, .62);
-  border-radius: 50%;
-  opacity: 0;
-  transform: scale(.35) rotate(35deg);
-  transform-origin: bottom left;
-  transition: opacity .2s ease, transform .42s cubic-bezier(.2, .85, .2, 1);
-  pointer-events: none;
-}
-
-.contact-orbit[data-open="true"]::before {
-  opacity: 1;
-  transform: scale(1) rotate(8deg);
 }
 
 .contact-orbit__launcher,
@@ -41,9 +21,9 @@
   width: 68px;
   height: 68px;
   padding: 0;
-  border: 2px solid var(--contact-space);
-  border-radius: 50%;
-  color: var(--contact-space);
+  border: 2px solid var(--contact-ink);
+  border-radius: 48% 52% 46% 54% / 53% 47% 52% 48%;
+  color: var(--contact-ink);
   cursor: pointer;
   box-shadow: 0 7px 0 rgba(9, 4, 38, .2), 0 14px 30px rgba(9, 4, 38, .28);
   transition: transform .24s ease, box-shadow .24s ease, opacity .18s ease;
@@ -59,9 +39,27 @@
   content: "";
   position: absolute;
   inset: 5px;
-  border: 1px solid rgba(31, 1, 80, .3);
+  border: 1px solid rgba(53, 16, 95, .38);
   border-radius: 48% 52% 46% 54%;
   transform: rotate(7deg);
+}
+
+.contact-orbit__action::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgba(53, 16, 95, .42);
+  border-radius: 53% 47% 51% 49% / 47% 54% 46% 53%;
+  transform: rotate(-6deg);
+  pointer-events: none;
+}
+
+.contact-orbit__action--email {
+  border-radius: 52% 48% 55% 45% / 47% 54% 46% 53%;
+}
+
+.contact-orbit__action--booking {
+  border-radius: 46% 54% 49% 51% / 55% 45% 53% 47%;
 }
 
 .contact-orbit__launcher:hover,
@@ -89,7 +87,11 @@
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 1.8;
+  transform: rotate(-1deg);
 }
+
+.contact-orbit__action--email svg { transform: rotate(1.5deg); }
+.contact-orbit__action--booking svg { transform: rotate(-1.5deg); }
 
 .contact-orbit__action {
   left: 0;
@@ -180,7 +182,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .contact-orbit::before,
   .contact-orbit__launcher,
   .contact-orbit__action,
   .contact-orbit__label {
