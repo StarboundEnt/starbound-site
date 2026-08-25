@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="population.css" />
   <link rel="stylesheet" href="explainer.css" />
   <link rel="stylesheet" href="../demo-brand.css" />
+  <link rel="stylesheet" href="../demo-feedback.css" />
   <link rel="stylesheet" href="../contact-widget.css" />
   <style>.signal-card[aria-pressed="true"]{border-color:var(--aqua);background:#2b1260;transform:translateX(4px)}</style>
 </head>
@@ -378,6 +379,28 @@
       </div>
     </section>
 
+    <section class="demo-feedback" aria-labelledby="providerFeedbackTitle">
+      <form name="provider-demo-feedback" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-demo-feedback data-audience="provider">
+        <input type="hidden" name="form-name" value="provider-demo-feedback" />
+        <input type="hidden" name="audience" value="provider" />
+        <input type="hidden" name="response" data-feedback-choice />
+        <input type="hidden" name="submission_stage" value="follow-up" />
+        <p hidden><label>Do not fill this out: <input name="bot-field" /></label></p>
+        <p class="demo-feedback__kicker">One quick question</p>
+        <h2 id="providerFeedbackTitle">Could you see your organisation using Starbound?</h2>
+        <div class="demo-feedback__choices" role="group" aria-label="Could you see your organisation using Starbound?">
+          <button class="demo-feedback__choice" type="button" data-feedback-value="Yes" aria-pressed="false">Yes</button>
+          <button class="demo-feedback__choice" type="button" data-feedback-value="Maybe" aria-pressed="false">Maybe</button>
+          <button class="demo-feedback__choice" type="button" data-feedback-value="No" aria-pressed="false">No</button>
+        </div>
+        <p class="demo-feedback__status" data-feedback-status role="status" aria-live="polite"></p>
+        <div class="demo-feedback__followup" data-feedback-followup hidden>
+          <label><span>What would make Starbound useful to your organisation? <small>Optional</small></span><textarea name="usefulness" maxlength="1200"></textarea></label>
+          <label><span>Want to explore Starbound further? <small>Optional</small></span><input name="email" type="email" autocomplete="email" placeholder="Email address" /></label>
+          <button class="demo-feedback__save" type="submit" data-feedback-save>Save optional feedback</button>
+        </div>
+      </form>
+    </section>
   </main>
 
   <div class="demo-toast" id="demoToast" role="status" aria-live="polite"></div>
@@ -414,6 +437,7 @@
   <script src="professional.js"></script>
   <script src="population.js"></script>
   <script src="explainer.js"></script>
+  <script src="../demo-feedback.js"></script>
   <script src="../contact-widget.js"></script>
 </body>
 </html>

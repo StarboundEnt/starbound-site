@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="blueprint-live.css" />
   <link rel="stylesheet" href="polish.css" />
   <link rel="stylesheet" href="../demo-brand.css" />
+  <link rel="stylesheet" href="../demo-feedback.css" />
   <link rel="stylesheet" href="../contact-widget.css" />
 </head>
 <body>
@@ -157,6 +158,28 @@
       </div>
     </section>
 
+    <section class="demo-feedback" aria-labelledby="personalFeedbackTitle">
+      <form name="personal-demo-feedback" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-demo-feedback data-audience="personal">
+        <input type="hidden" name="form-name" value="personal-demo-feedback" />
+        <input type="hidden" name="audience" value="personal" />
+        <input type="hidden" name="response" data-feedback-choice />
+        <input type="hidden" name="submission_stage" value="follow-up" />
+        <p hidden><label>Do not fill this out: <input name="bot-field" /></label></p>
+        <p class="demo-feedback__kicker">One quick question</p>
+        <h2 id="personalFeedbackTitle">Would you use Starbound?</h2>
+        <div class="demo-feedback__choices" role="group" aria-label="Would you use Starbound?">
+          <button class="demo-feedback__choice" type="button" data-feedback-value="Yes" aria-pressed="false">Yes</button>
+          <button class="demo-feedback__choice" type="button" data-feedback-value="Maybe" aria-pressed="false">Maybe</button>
+          <button class="demo-feedback__choice" type="button" data-feedback-value="No" aria-pressed="false">No</button>
+        </div>
+        <p class="demo-feedback__status" data-feedback-status role="status" aria-live="polite"></p>
+        <div class="demo-feedback__followup" data-feedback-followup hidden>
+          <label><span>What would make Starbound useful to you? <small>Optional</small></span><textarea name="usefulness" maxlength="1200"></textarea></label>
+          <label><span>Want to stay involved? <small>Optional</small></span><input name="email" type="email" autocomplete="email" placeholder="Email address" /></label>
+          <button class="demo-feedback__save" type="submit" data-feedback-save>Save optional feedback</button>
+        </div>
+      </form>
+    </section>
   </main>
 
   <aside class="site-pet" id="sitePet" aria-label="Starbound alien companion">
@@ -183,6 +206,7 @@
         : `${window.location.origin}/api/v1/demo-answer`);
   </script>
   <script src="complexity.js"></script>
+  <script src="../demo-feedback.js"></script>
   <script src="../contact-widget.js"></script>
 </body>
 </html>
