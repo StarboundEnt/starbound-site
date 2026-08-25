@@ -17,7 +17,7 @@
         localStorage.setItem(storageKey, JSON.stringify(saved));
         return;
       }
-      const response = await fetch('/', {
+      const response = await fetch(form.action, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({ 'form-name': form.name, ...fields })

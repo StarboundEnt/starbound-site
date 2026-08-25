@@ -159,7 +159,7 @@
     </section>
 
     <section class="demo-feedback" aria-labelledby="personalFeedbackTitle">
-      <form name="personal-demo-feedback" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-demo-feedback data-audience="personal">
+      <form name="personal-demo-feedback" method="POST" action="/demo/" netlify data-netlify="true" netlify-honeypot="bot-field" data-demo-feedback data-audience="personal">
         <input type="hidden" name="form-name" value="personal-demo-feedback" />
         <input type="hidden" name="audience" value="personal" />
         <input type="hidden" name="response" data-feedback-choice />
@@ -206,7 +206,7 @@
         : `${window.location.origin}/api/v1/demo-answer`);
   </script>
   <script src="complexity.js"></script>
-  <script src="../demo-feedback.js?v=20260825-1"></script>
+  <script src="../demo-feedback.js?v=20260825-2"></script>
   <script src="../contact-widget.js"></script>
 </body>
 </html>
