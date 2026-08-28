@@ -401,24 +401,83 @@ a:focus-visible { outline: 3px solid var(--aqua); outline-offset: 4px; }
 }
 
 @media (max-width: 520px) {
-  .site-header { padding: 0 20px; }
-  .site-nav { gap: .5rem; }
-  .nav-button { padding: .65rem .8rem; font-size: .68rem; }
-  main, footer { width: min(100% - 30px, 1240px); }
-  .hero { padding: 5.5rem 0 4.5rem; }
-  .hero h1 { font-size: clamp(2.2rem, 12vw, 3.2rem); }
-  .section-intro h2 { font-size: clamp(2rem, 10vw, 3.2rem); }
-  .demo-section { padding: 5rem 0; }
-  .demo-card { min-height: 560px; border-radius: 22px; }
-  .card-visual { height: 230px; }
-  .card-copy { padding: 1.5rem; }
-  .note-section { padding: 5rem 0 6rem; gap: 1.8rem; }
-  .note-envelope { height: 220px; }
-  .contact-section { padding-bottom: 5rem; }
-  .contact-card { padding: 1.35rem 1rem 1.6rem; border-radius: 14px; }
-  .contact-card h2 { font-size: clamp(1.6rem, 6.8vw, 2.15rem); white-space: normal; }
+  .site-header {
+    min-height: 64px;
+    padding: 0 14px;
+    gap: .65rem;
+  }
+
+  .brand { flex: 0 0 auto; }
+  .brand img { width: 36px; height: 36px; }
+  .brand span { display: none; }
+
+  .site-nav {
+    flex: 1;
+    justify-content: flex-end;
+    gap: .4rem;
+  }
+
+  .nav-button {
+    min-height: 40px;
+    padding: .6rem .68rem;
+    font-size: clamp(.58rem, 2.75vw, .67rem);
+    letter-spacing: .035em;
+  }
+
+  main, footer { width: min(100% - 32px, 1240px); }
+
+  .hero {
+    min-height: auto;
+    padding: clamp(4.25rem, 18vw, 5.5rem) 0 4.5rem;
+  }
+
+  .hero h1 {
+    max-width: 11ch;
+    font-size: clamp(2.25rem, 10.5vw, 3.1rem);
+    line-height: 1.01;
+  }
+
+  .hero-copy {
+    margin-top: 1.75rem;
+    font-size: 1rem;
+    line-height: 1.58;
+  }
+
+  .section-intro { margin-bottom: 2rem; }
+  .section-intro h2 { font-size: clamp(2rem, 9.5vw, 3rem); line-height: 1.03; }
+  .demo-section { padding: 4.5rem 0 5rem; }
+  .demo-grid { gap: 1rem; }
+  .demo-card { min-height: 0; border-radius: 20px; }
+
+  .card-visual {
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+
+  .card-copy { padding: 1.35rem; }
+  .card-copy h3 { font-size: clamp(1.65rem, 7.5vw, 2.15rem); }
+  .card-copy > p:not(.card-label) { margin-bottom: 1.5rem; }
+  .demo-button { min-height: 48px; padding: .85rem 1rem; letter-spacing: .045em; }
+
+  .note-section { padding: 4.5rem 0 5.5rem; gap: 1.65rem; }
+  .note-section h2 { font-size: clamp(2rem, 9.5vw, 3rem); line-height: 1.03; }
+  .note-section__intro { margin-top: -.45rem; }
+  .note-envelope { width: 100%; height: 215px; }
+
+  .contact-section { padding-bottom: 4rem; }
+  .contact-card { padding: 1.35rem 0 1.6rem; border-radius: 14px; }
+  .contact-card h2 { font-size: clamp(1.6rem, 7.5vw, 2.15rem); line-height: 1.02; white-space: normal; }
+  .contact-button { min-height: 48px; }
   .contact-actions { align-items: center; }
   footer { flex-direction: column; }
+}
+
+@media (max-width: 350px) {
+  .site-header { padding-inline: 10px; }
+  .nav-button { padding-inline: .55rem; font-size: .56rem; }
+  main, footer { width: calc(100% - 24px); }
+  .hero h1 { font-size: 2.08rem; }
+  .card-copy { padding: 1.2rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

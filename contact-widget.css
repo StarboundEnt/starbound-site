@@ -155,29 +155,35 @@
 }
 
 @media (max-width: 420px) {
+  .contact-orbit {
+    right: 12px;
+    bottom: 12px;
+    left: auto;
+  }
+
   .contact-orbit,
   .contact-orbit__launcher,
   .contact-orbit__action {
-    width: 60px;
-    height: 60px;
+    width: 54px;
+    height: 54px;
   }
 
   .contact-orbit[data-open="true"] .contact-orbit__action--email {
-    transform: translate(76px, -100px) rotate(-3deg);
+    transform: translate(-64px, -88px) rotate(-3deg);
   }
 
   .contact-orbit[data-open="true"] .contact-orbit__action--booking {
-    transform: translate(106px, -20px) rotate(4deg);
+    transform: translate(-94px, -12px) rotate(4deg);
   }
 
   .contact-orbit[data-open="true"] .contact-orbit__action--email:hover,
   .contact-orbit[data-open="true"] .contact-orbit__action--email:focus-visible {
-    transform: translate(76px, -104px) rotate(0);
+    transform: translate(-64px, -92px) rotate(0);
   }
 
   .contact-orbit[data-open="true"] .contact-orbit__action--booking:hover,
   .contact-orbit[data-open="true"] .contact-orbit__action--booking:focus-visible {
-    transform: translate(106px, -24px) rotate(0);
+    transform: translate(-94px, -16px) rotate(0);
   }
 }
 

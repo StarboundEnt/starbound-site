@@ -1,0 +1,169 @@
+/* Shared phone refinements for the personal and provider prototypes. */
+.phone-view-note { display: none; }
+
+@media (max-width: 760px) {
+  .phone-view-note {
+    position: relative;
+    z-index: 4;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px max(18px, 5vw);
+    border-bottom: 1px solid rgba(0, 245, 212, .42);
+    background: #2b1260;
+    color: #e8ddf0;
+    font: 500 .78rem/1.45 "Inter", sans-serif;
+  }
+
+  .phone-view-note strong { color: #00f5d4; }
+
+  .phone-view-note__icon {
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    width: 25px;
+    height: 19px;
+    margin-top: 1px;
+    border: 1px solid #00f5d4;
+    border-radius: 2px;
+    color: #00f5d4;
+    font: 700 0/1 "Space Mono", monospace;
+  }
+
+  .phone-view-note__icon::after {
+    content: "";
+    width: 14px;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(11px);
+  }
+}
+
+@media (max-width: 560px) {
+  body { min-width: 320px; }
+
+  .site-header,
+  .topbar {
+    height: 64px;
+    min-height: 64px;
+    padding-inline: 12px;
+    gap: 10px;
+  }
+
+  .site-header .brand span,
+  .topbar .brand span { display: none; }
+
+  .site-header .brand-logo,
+  .topbar .brand img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .demo-switch {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 11px;
+    font-size: clamp(.56rem, 2.75vw, .66rem);
+    letter-spacing: .045em;
+    white-space: nowrap;
+  }
+
+  .safety-strip,
+  .privacy-bar {
+    padding: 10px 16px;
+    line-height: 1.4;
+  }
+
+  .blueprint-overview,
+  .builder,
+  .question-lab,
+  .data-journey {
+    padding-inline: 18px;
+  }
+
+  .blueprint-heading h2,
+  .section-heading h2,
+  .journey-copy h2 {
+    font-size: clamp(2.15rem, 10.5vw, 2.75rem);
+    line-height: 1.02;
+    overflow-wrap: anywhere;
+  }
+
+  .section-heading { margin-bottom: 30px; gap: 14px; }
+  .text-button { min-height: 44px; padding: 8px 0; }
+
+  .context-option,
+  .question-tab,
+  .primary-button,
+  .journey-controls button,
+  .journey-steps button,
+  .population-tab,
+  .workspace-mode-tabs button,
+  .analytics-tabs button { min-height: 44px; }
+
+  .question-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-inline: -18px;
+    padding-inline: 18px;
+    scrollbar-width: thin;
+    scroll-snap-type: x proximity;
+  }
+
+  .question-tab {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  .question-input-row input { min-height: 52px; font-size: 16px; }
+  .answer-card { min-height: 0; padding: 20px 18px; }
+  .profile-card { padding: 22px 18px; }
+
+  .data-journey { padding-top: 52px; padding-bottom: 58px; }
+  .journey-copy { margin-bottom: 28px; }
+  .journey-support { font-size: .95rem; }
+  .journey-controls { width: 100%; max-width: none; }
+  .journey-controls p { min-height: 0; }
+
+  .journey-steps {
+    display: flex;
+    gap: 7px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scroll-snap-type: x proximity;
+  }
+
+  .journey-steps li {
+    flex: 0 0 150px;
+    scroll-snap-align: start;
+  }
+
+  .population-workspace,
+  .analytics-shell { overflow: hidden; }
+
+  .population-tabs,
+  .workspace-mode-tabs,
+  .analytics-tabs {
+    overscroll-behavior-inline: contain;
+    scrollbar-width: thin;
+  }
+
+  .prospect-cta { padding: 30px 20px; }
+  .prospect-actions a,
+  .prospect-actions button { min-height: 44px; display: inline-flex; align-items: center; }
+}
+
+@media (max-width: 350px) {
+  .site-header,
+  .topbar { padding-inline: 9px; }
+  .demo-switch { padding-inline: 9px; font-size: .55rem; }
+  .blueprint-overview,
+  .builder,
+  .question-lab,
+  .data-journey { padding-inline: 14px; }
+  .question-tabs { margin-inline: -14px; padding-inline: 14px; }
+  .blueprint-heading h2,
+  .section-heading h2,
+  .journey-copy h2 { font-size: 2rem; }
+}
