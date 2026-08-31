@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E0295VQDHT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E0295VQDHT');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#1f0150" />
@@ -70,7 +78,7 @@
             <p class="card-label">FOR PEOPLE</p>
             <h3>Build a Complexity Profile</h3>
             <p>See how the same health question changes when support understands capacity, cost, housing, care and other real-life pressures.</p>
-            <a class="demo-button primary" href="demo/">
+            <a class="demo-button primary" href="demo/" data-analytics-event="open_demo" data-analytics-audience="personal">
               Open the personal demo <span aria-hidden="true">↗</span>
             </a>
           </div>
@@ -84,7 +92,7 @@
             <p class="card-label">FOR PROVIDERS</p>
             <h3>Explore Community Signals</h3>
             <p>See how aggregated, privacy-protected patterns can help services understand shared barriers and ask better questions.</p>
-            <a class="demo-button primary" href="provider-demo/">
+            <a class="demo-button primary" href="provider-demo/" data-analytics-event="open_demo" data-analytics-audience="provider">
               Open the provider demo <span aria-hidden="true">↗</span>
             </a>
           </div>
@@ -108,6 +116,7 @@
     <p>Prototype experiences for demonstration only — not medical advice.</p>
     <span>STARBOUND // 2026</span>
   </footer>
+  <script src="analytics.js"></script>
   <script src="contact-widget.js"></script>
 </body>
 </html>

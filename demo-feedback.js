@@ -34,6 +34,10 @@
       status.textContent = 'Saving your answer…';
       try {
         await post({ audience: form.dataset.audience, response: value, submission_stage: 'choice' });
+        window.starboundTrack?.('feedback_choice', {
+          audience: form.dataset.audience,
+          response: value
+        });
         status.textContent = isLocalPreview
           ? 'Your answer is saved in this browser preview. The questions below are optional.'
           : 'Your answer is saved. The questions below are optional.';
@@ -51,6 +55,11 @@
       const data = Object.fromEntries(new FormData(form));
       try {
         await post({ ...data, submission_stage: 'follow-up' });
+        window.starboundTrack?.('feedback_follow_up', {
+          audience: form.dataset.audience,
+          has_comment: Boolean(data.usefulness),
+          has_email: Boolean(data.email)
+        });
         status.textContent = isLocalPreview
           ? 'Thanks — your feedback is saved in this browser preview.'
           : 'Thanks — your feedback is saved.';
